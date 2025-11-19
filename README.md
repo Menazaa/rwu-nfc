@@ -5,7 +5,7 @@
 [![Platform](https://img.shields.io/badge/Platform-Arduino-blue.svg)](https://www.arduino.cc/)
 [![Framework](https://img.shields.io/badge/Framework-PlatformIO-orange.svg)](https://platformio.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Documentation](https://img.shields.io/badge/Docs-Sphinx-brightgreen.svg)](doc/)
+[![Documentation](https://img.shields.io/badge/Docs-Sphinx-brightgreen.svg)](https://menazaa.github.io/rwu-nfc/)
 
 ## 📖 Description
 
@@ -424,18 +424,20 @@ This project demonstrates advanced NFC card management without requiring special
 
 ## 📚 Documentation
 
-Comprehensive documentation is available in the `docs/` directory, built with Sphinx:
+Comprehensive documentation is available online at **[https://menazaa.github.io/rwu-nfc/](https://menazaa.github.io/rwu-nfc/)**
 
-- **[Introduction](docs/source/introduction.rst)** - System overview and architecture diagrams
-- **[Hardware Setup](docs/source/hardware.rst)** - Wiring diagrams and component details
-- **[Installation Guide](docs/source/installation.rst)** - Development environment setup
-- **[Usage Guide](docs/source/usage.rst)** - Operating instructions and menu navigation
-- **[API Reference](docs/source/api.rst)** - Class documentation and code examples
-- **[EEPROM Layout](docs/source/eeprom.rst)** - Memory structure and management
-- **[Card Cloning](docs/source/card_cloning.rst)** - Technical details of cloning technology
-- **[Troubleshooting](docs/source/troubleshooting.rst)** - Common issues and solutions
+- **[Introduction](https://menazaa.github.io/rwu-nfc/introduction.html)** - System overview and architecture diagrams
+- **[Hardware Setup](https://menazaa.github.io/rwu-nfc/hardware.html)** - Wiring diagrams and component details
+- **[Installation Guide](https://menazaa.github.io/rwu-nfc/installation.html)** - Development environment setup
+- **[Usage Guide](https://menazaa.github.io/rwu-nfc/usage.html)** - Operating instructions and menu navigation
+- **[API Reference](https://menazaa.github.io/rwu-nfc/api.html)** - Class documentation and code examples
+- **[EEPROM Layout](https://menazaa.github.io/rwu-nfc/eeprom.html)** - Memory structure and management
+- **[Card Cloning](https://menazaa.github.io/rwu-nfc/card_cloning.html)** - Technical details of cloning technology
+- **[Troubleshooting](https://menazaa.github.io/rwu-nfc/troubleshooting.html)** - Common issues and solutions
 
-### Building Documentation
+### Building Documentation Locally
+
+To build the documentation from source:
 
 ```bash
 cd docs
@@ -498,7 +500,7 @@ Contributions are welcome! Here's how you can help:
 For issues and questions:
 1. Check Serial Monitor output (115200 baud)
 2. Verify hardware connections against wiring diagram
-3. Review [Troubleshooting Documentation](docs/source/troubleshooting.rst)
+3. Review [Troubleshooting Documentation](https://menazaa.github.io/rwu-nfc/troubleshooting.html)
 4. Check card compatibility (Mifare Classic 1K/4K required for cloning)
 5. Open an issue on GitHub with detailed information
 
