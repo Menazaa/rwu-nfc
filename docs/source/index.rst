@@ -20,6 +20,8 @@ capabilities.
    card_cloning
    troubleshooting
    quickstart
+   data_read
+   data_write
 
 Overview
 --------
