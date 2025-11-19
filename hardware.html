@@ -1,0 +1,928 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hardware Setup &mdash; NFC Access Control System 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=467e753e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" />
+    <link rel="prev" title="Examples" href="examples.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NFC Access Control System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-evolution">Project Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#what-is-nfc">What is NFC?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#system-architecture">System Architecture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#hardware-layer">Hardware Layer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#software-layer">Software Layer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#design-philosophy">Design Philosophy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#security-first">Security First</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#user-friendly">User Friendly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#educational-value">Educational Value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#flexibility">Flexibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#reliability">Reliability</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#use-cases">Use Cases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#educational-applications">Educational Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#practical-applications">Practical Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#technical-specifications">Technical Specifications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#hardware-requirements">Hardware Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#software-capabilities">Software Capabilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#performance-metrics">Performance Metrics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-structure">Project Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id1">Hardware Layer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id2">Software Layer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#id3">Design Philosophy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id4">Security First</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id5">User Friendly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id6">Educational Value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id7">Flexibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id8">Reliability</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#id9">Use Cases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id10">Educational Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id11">Practical Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#id12">Technical Specifications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id13">Hardware Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id14">Software Capabilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id15">Performance Metrics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#id16">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#id17">Project Structure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#course-tasks-overview">Course Tasks Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#task-1-reading-nfc-tags">Task 1: Reading NFC Tags</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#learning-objectives">Learning Objectives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#example-code-read-example-cpp">Example Code: read_example.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#key-concepts">Key Concepts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#running-the-example">Running the Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#expected-output">Expected Output</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#task-2-writing-to-nfc-tags">Task 2: Writing to NFC Tags</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#id1">Learning Objectives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#example-code-write-example-cpp">Example Code: write_example.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#card-storage-structures">Card Storage Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#write-functions-reference">Write Functions Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#id2">Running the Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#safety-tips">Safety Tips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#common-issues-and-solutions">Common Issues and Solutions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#advanced-topics">Advanced Topics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#card-cloning">Card Cloning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#ndef-messages">NDEF Messages</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#next-steps">Next Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#tips-for-development">Tips for Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#see-also">See Also</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hardware Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#required-components">Required Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#core-components">Core Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-components">Additional Components</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pin-configuration">Pin Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pn532-nfc-module-spi-mode">PN532 NFC Module (SPI Mode)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lcd-display-4-bit-parallel">LCD Display (4-bit Parallel)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#navigation-buttons">Navigation Buttons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#relay-module">Relay Module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#wiring-diagram">Wiring Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#power-considerations">Power Considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#assembly-tips">Assembly Tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting-hardware-issues">Troubleshooting Hardware Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lcd-not-displaying">LCD Not Displaying</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pn532-not-detected">PN532 Not Detected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#buttons-not-responding">Buttons Not Responding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#relay-not-activating">Relay Not Activating</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#prerequisites">Prerequisites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#required-software">Required Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#recommended-tools">Recommended Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#setting-up-platformio">Setting Up PlatformIO</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#option-1-platformio-ide-recommended">Option 1: PlatformIO IDE (Recommended)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#option-2-platformio-core-cli">Option 2: PlatformIO Core (CLI)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#getting-the-source-code">Getting the Source Code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#clone-from-repository">Clone from Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#download-zip">Download ZIP</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#project-structure">Project Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#pin-configuration">Pin Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#building-the-firmware">Building the Firmware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#using-platformio-ide">Using PlatformIO IDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#using-platformio-cli">Using PlatformIO CLI</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#uploading-to-arduino">Uploading to Arduino</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#preparing-the-arduino">Preparing the Arduino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#id1">Using PlatformIO IDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#specifying-upload-port">Specifying Upload Port</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#monitoring-serial-output">Monitoring Serial Output</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#using-platformio">Using PlatformIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#using-arduino-ide-serial-monitor">Using Arduino IDE Serial Monitor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#troubleshooting-installation">Troubleshooting Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#build-errors">Build Errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#upload-errors">Upload Errors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#verification">Verification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#system-startup">System Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#normal-operation">Normal Operation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#scanning-cards">Scanning Cards</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#menu-system">Menu System</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#accessing-the-menu">Accessing the Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#menu-navigation">Menu Navigation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#main-menu-items">Main Menu Items</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#card-management">Card Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#registering-a-new-card">Registering a New Card</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#deleting-a-card">Deleting a Card</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#listing-stored-cards">Listing Stored Cards</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#advanced-features">Advanced Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#card-cloning">Card Cloning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#system-information">System Information</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#customization">Customization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#access-duration">Access Duration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#button-configuration">Button Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#card-capacity">Card Capacity</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#best-practices">Best Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#regular-operation">Regular Operation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#id1">Card Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#system-maintenance">System Maintenance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#security-considerations">Security Considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#physical-security">Physical Security</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#access-control">Access Control</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#serial-output">Serial Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#troubleshooting-common-issues">Troubleshooting Common Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#card-not-reading">Card Not Reading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#false-readings">False Readings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#menu-not-responding">Menu Not Responding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#relay-not-activating">Relay Not Activating</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="diagrams.html">Class Diagrams</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#system-architecture-overview">System Architecture Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#accesscontrolsystem-class">AccessControlSystem Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#nfcreader-class">NFCReader Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#complete-system-relationships">Complete System Relationships</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#state-machine">State Machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#card-registration-flow">Card Registration Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#card-cloning-flow">Card Cloning Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#mifare-memory-layout">MIFARE Memory Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#installation-and-usage">Installation and Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#see-also">See Also</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.html#core-classes">Core Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.html#accesscontrolsystem">AccessControlSystem</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api.html#_CPPv419AccessControlSystem"><code class="docutils literal notranslate"><span class="pre">AccessControlSystem</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#nfcreader">NFCReader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api.html#_CPPv49NFCReader"><code class="docutils literal notranslate"><span class="pre">NFCReader</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#enumerations">Enumerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.html#nfccommmode">NFCCommMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#nfcreadmode">NFCReadMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#nfccardtype">NFCCardType</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#data-structures">Data Structures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.html#nfccardinfo">NFCCardInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#nfcwriteresult">NFCWriteResult</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#systemstate">SystemState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#state-machine-diagram">State Machine Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#menuitem">MenuItem</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#configuration-constants">Configuration Constants</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.html#hardware-pin-definitions">Hardware Pin Definitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#system-parameters">System Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#eeprom-memory-map">EEPROM Memory Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#custom-sector-configuration">Custom Sector Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#example-usage">Example Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.html#basic-setup">Basic Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#custom-card-handling">Custom Card Handling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#manual-card-registration">Manual Card Registration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#return-values">Return Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#memory-considerations">Memory Considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.html#eeprom-usage">EEPROM Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#ram-usage">RAM Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#thread-safety">Thread Safety</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#debugging">Debugging</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eeprom.html">EEPROM Memory Layout</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eeprom.html#memory-map-overview">Memory Map Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eeprom.html#memory-regions">Memory Regions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#header-section">Header Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#card-data-section">Card Data Section</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="eeprom.html#memory-operations">Memory Operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#read-operation-flow">Read Operation Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#write-operation-flow">Write Operation Flow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="eeprom.html#memory-wear-leveling">Memory Wear Leveling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#write-frequency-estimation">Write Frequency Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#best-practices">Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="eeprom.html#memory-initialization">Memory Initialization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#first-time-setup">First-Time Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#code-example">Code Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="eeprom.html#memory-debugging">Memory Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eeprom.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="card_cloning.html">Card Cloning Technology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#how-it-works">How It Works</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#dual-uid-system">Dual UID System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#reading-priority">Reading Priority</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#custom-sector-structure">Custom Sector Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#sector-1-layout">Sector 1 Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#block-4-structure-uid-block">Block 4 Structure (UID Block)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#block-5-structure-metadata-block">Block 5 Structure (Metadata Block)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#cloning-process">Cloning Process</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#step-by-step-procedure">Step-by-Step Procedure</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#code-implementation">Code Implementation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#nfcreader-clonecard-method">NFCReader::cloneCard() Method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#reading-cloned-uid">Reading Cloned UID</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#security-considerations">Security Considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#authentication-keys">Authentication Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#access-control">Access Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#physical-security">Physical Security</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#limitations">Limitations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#card-compatibility">Card Compatibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#key-requirements">Key Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#write-limitations">Write Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#advantages-over-magic-cards">Advantages Over Magic Cards</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#traditional-magic-cards">Traditional “Magic” Cards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#our-custom-sector-approach">Our Custom Sector Approach</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#best-practices">Best Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#cloning-workflow">Cloning Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#error-handling">Error Handling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#storage-management">Storage Management</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#advanced-topics">Advanced Topics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#multi-identity-cards">Multi-Identity Cards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#encrypted-clones">Encrypted Clones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#time-limited-clones">Time-Limited Clones</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#example-use-cases">Example Use Cases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#backup-access-card">Backup Access Card</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#temporary-access">Temporary Access</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#multi-location-access">Multi-Location Access</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#testing-and-validation">Testing and Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#troubleshooting-cloning-issues">Troubleshooting Cloning Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#hardware-issues">Hardware Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#pn532-module-not-detected">PN532 Module Not Detected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#lcd-display-issues">LCD Display Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#button-problems">Button Problems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#relay-issues">Relay Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#card-reading-issues">Card Reading Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#cards-not-detected">Cards Not Detected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#specific-card-types">Specific Card Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#software-issues">Software Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#compilation-errors">Compilation Errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#upload-failures">Upload Failures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#runtime-errors">Runtime Errors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#cloning-issues">Cloning Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#authentication-failed">Authentication Failed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#write-failed">Write Failed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#verification-failed">Verification Failed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#cloned-card-not-working">Cloned Card Not Working</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#access-control-issues">Access Control Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#authorized-card-denied">Authorized Card Denied</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#unauthorized-card-granted">Unauthorized Card Granted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#relay-timing-issues">Relay Timing Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#menu-system-issues">Menu System Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#menu-not-accessible">Menu Not Accessible</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#cannot-exit-menu">Cannot Exit Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#cards-not-listing">Cards Not Listing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#diagnostic-tools">Diagnostic Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#serial-monitor-output">Serial Monitor Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#testing-individual-components">Testing Individual Components</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#common-error-codes">Common Error Codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#getting-help">Getting Help</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#before-seeking-support">Before Seeking Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#information-to-provide">Information to Provide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#support-channels">Support Channels</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start - Building Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#building">Building</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#html-documentation-recommended">HTML Documentation (Recommended)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#pdf-documentation">PDF Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#viewing">Viewing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#cleaning">Cleaning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#common-issues">Common Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#importerror-no-module-named-sphinx">ImportError: No module named sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#sphinx-build-command-not-found">sphinx-build command not found</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#theme-not-found">Theme not found</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#latex-errors-when-building-pdf">LaTeX errors when building PDF</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#tips">Tips</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NFC Access Control System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Hardware Setup</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/hardware.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="hardware-setup">
+<h1>Hardware Setup<a class="headerlink" href="#hardware-setup" title="Link to this heading"></a></h1>
+<p>This section describes the hardware components required for the NFC Access
+Control System and provides detailed wiring instructions.</p>
+<section id="required-components">
+<h2>Required Components<a class="headerlink" href="#required-components" title="Link to this heading"></a></h2>
+<section id="core-components">
+<h3>Core Components<a class="headerlink" href="#core-components" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Arduino Nano</strong> (ATmega328P)</p>
+<ul>
+<li><p>Microcontroller board based on ATmega328P</p></li>
+<li><p>Operating Voltage: 5V</p></li>
+<li><p>Digital I/O Pins: 14</p></li>
+<li><p>Analog Input Pins: 8</p></li>
+</ul>
+</li>
+<li><p><strong>PN532 NFC Module</strong></p>
+<ul>
+<li><p>NFC/RFID controller</p></li>
+<li><p>Operating frequency: 13.56 MHz</p></li>
+<li><p>Communication: SPI mode (with IRQ support)</p></li>
+<li><p>Support for Mifare Classic, Mifare Ultralight, NTAG</p></li>
+</ul>
+</li>
+<li><p><strong>16x2 LCD Display</strong></p>
+<ul>
+<li><p>Alphanumeric LCD with 16 columns and 2 rows</p></li>
+<li><p>HD44780 compatible controller</p></li>
+<li><p>4-bit parallel interface mode</p></li>
+<li><p>Backlight: LED (optional)</p></li>
+</ul>
+</li>
+<li><p><strong>Push Buttons</strong> (4 pieces)</p>
+<ul>
+<li><p>Momentary tactile switches</p></li>
+<li><p>Used for: UP, DOWN, SELECT, BACK navigation</p></li>
+</ul>
+</li>
+<li><p><strong>Relay Module</strong></p>
+<ul>
+<li><p>5V single-channel relay</p></li>
+<li><p>Used to control door lock or strike</p></li>
+<li><p>Supports both NO and NC configurations</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="additional-components">
+<h3>Additional Components<a class="headerlink" href="#additional-components" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Breadboard or custom PCB</p></li>
+<li><p>Jumper wires (male-to-male, male-to-female)</p></li>
+<li><p>10kΩ resistors (4 pieces) for button pull-downs</p></li>
+<li><p>220Ω resistor for LCD backlight (if needed)</p></li>
+<li><p>10kΩ potentiometer for LCD contrast adjustment</p></li>
+<li><p>5V power supply (capable of 500mA minimum)</p></li>
+</ul>
+</section>
+</section>
+<section id="pin-configuration">
+<h2>Pin Configuration<a class="headerlink" href="#pin-configuration" title="Link to this heading"></a></h2>
+<section id="pn532-nfc-module-spi-mode">
+<h3>PN532 NFC Module (SPI Mode)<a class="headerlink" href="#pn532-nfc-module-spi-mode" title="Link to this heading"></a></h3>
+<p>Connect the PN532 module to the Arduino Nano as follows:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>PN532 Pin</p></th>
+<th class="head"><p>Arduino Pin</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>VCC</p></td>
+<td><p>5V</p></td>
+<td><p>Power supply</p></td>
+</tr>
+<tr class="row-odd"><td><p>GND</p></td>
+<td><p>GND</p></td>
+<td><p>Ground</p></td>
+</tr>
+<tr class="row-even"><td><p>SCK</p></td>
+<td><p>D13</p></td>
+<td><p>SPI Clock</p></td>
+</tr>
+<tr class="row-odd"><td><p>MISO</p></td>
+<td><p>D12</p></td>
+<td><p>SPI Master In Slave Out</p></td>
+</tr>
+<tr class="row-even"><td><p>MOSI</p></td>
+<td><p>D11</p></td>
+<td><p>SPI Master Out Slave In</p></td>
+</tr>
+<tr class="row-odd"><td><p>SS</p></td>
+<td><p>D10</p></td>
+<td><p>SPI Chip Select</p></td>
+</tr>
+<tr class="row-even"><td><p>IRQ</p></td>
+<td><p>D2</p></td>
+<td><p>Interrupt Request</p></td>
+</tr>
+<tr class="row-odd"><td><p>RST</p></td>
+<td><p>D3</p></td>
+<td><p>Reset</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Important</strong>: Ensure the PN532 module is configured for SPI mode by setting
+the appropriate DIP switches or solder jumpers on the module.</p>
+</section>
+<section id="lcd-display-4-bit-parallel">
+<h3>LCD Display (4-bit Parallel)<a class="headerlink" href="#lcd-display-4-bit-parallel" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>LCD Pin</p></th>
+<th class="head"><p>Arduino Pin</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>VSS</p></td>
+<td><p>GND</p></td>
+<td><p>Ground</p></td>
+</tr>
+<tr class="row-odd"><td><p>VDD</p></td>
+<td><p>5V</p></td>
+<td><p>Power supply</p></td>
+</tr>
+<tr class="row-even"><td><p>V0</p></td>
+<td><p>POT</p></td>
+<td><p>Contrast (connect to potentiometer)</p></td>
+</tr>
+<tr class="row-odd"><td><p>RS</p></td>
+<td><p>D4</p></td>
+<td><p>Register Select</p></td>
+</tr>
+<tr class="row-even"><td><p>RW</p></td>
+<td><p>GND</p></td>
+<td><p>Read/Write (tied to ground for write-only)</p></td>
+</tr>
+<tr class="row-odd"><td><p>E</p></td>
+<td><p>D5</p></td>
+<td><p>Enable</p></td>
+</tr>
+<tr class="row-even"><td><p>D4</p></td>
+<td><p>D6</p></td>
+<td><p>Data bit 4</p></td>
+</tr>
+<tr class="row-odd"><td><p>D5</p></td>
+<td><p>D7</p></td>
+<td><p>Data bit 5</p></td>
+</tr>
+<tr class="row-even"><td><p>D6</p></td>
+<td><p>D8</p></td>
+<td><p>Data bit 6</p></td>
+</tr>
+<tr class="row-odd"><td><p>D7</p></td>
+<td><p>D9</p></td>
+<td><p>Data bit 7</p></td>
+</tr>
+<tr class="row-even"><td><p>A</p></td>
+<td><p>5V</p></td>
+<td><p>Backlight anode (via 220Ω resistor)</p></td>
+</tr>
+<tr class="row-odd"><td><p>K</p></td>
+<td><p>GND</p></td>
+<td><p>Backlight cathode</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="navigation-buttons">
+<h3>Navigation Buttons<a class="headerlink" href="#navigation-buttons" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 30.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Button</p></th>
+<th class="head"><p>Arduino Pin</p></th>
+<th class="head"><p>Function</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>UP</p></td>
+<td><p>A0</p></td>
+<td><p>Navigate up in menus</p></td>
+</tr>
+<tr class="row-odd"><td><p>DOWN</p></td>
+<td><p>A1</p></td>
+<td><p>Navigate down in menus</p></td>
+</tr>
+<tr class="row-even"><td><p>SELECT</p></td>
+<td><p>A2</p></td>
+<td><p>Select menu item</p></td>
+</tr>
+<tr class="row-odd"><td><p>BACK</p></td>
+<td><p>A3</p></td>
+<td><p>Return to previous menu</p></td>
+</tr>
+</tbody>
+</table>
+<p>Each button should be connected between the Arduino pin and ground, with a
+10kΩ pull-down resistor. Internal pull-ups are enabled in software.</p>
+</section>
+<section id="relay-module">
+<h3>Relay Module<a class="headerlink" href="#relay-module" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 30.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Relay Pin</p></th>
+<th class="head"><p>Arduino Pin</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>VCC</p></td>
+<td><p>5V</p></td>
+<td><p>Power supply</p></td>
+</tr>
+<tr class="row-odd"><td><p>GND</p></td>
+<td><p>GND</p></td>
+<td><p>Ground</p></td>
+</tr>
+<tr class="row-even"><td><p>IN</p></td>
+<td><p>A4</p></td>
+<td><p>Control signal</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="wiring-diagram">
+<h2>Wiring Diagram<a class="headerlink" href="#wiring-diagram" title="Link to this heading"></a></h2>
+<figure class="align-default" id="id1">
+<div class="graphviz"><object data="_images/graphviz-dae8ed03923ea589df644208e1f179e496da36aa.svg" type="image/svg+xml" class="graphviz">
+<p class="warning">digraph hardware_connections {
+    rankdir=LR;
+    node [shape=record];
+
+    // Arduino
+    arduino [label=&quot;{Arduino Nano|{&lt;d2&gt;D2 (IRQ)|&lt;d3&gt;D3 (RST)|&lt;d4&gt;D4|&lt;d5&gt;D5|&lt;d6&gt;D6|&lt;d7&gt;D7|&lt;d8&gt;D8|&lt;d9&gt;D9|&lt;d10&gt;D10 (SS)|&lt;d11&gt;D11 (MOSI)|&lt;d12&gt;D12 (MISO)|&lt;d13&gt;D13 (SCK)|&lt;a0&gt;A0|&lt;a1&gt;A1|&lt;a2&gt;A2|&lt;a3&gt;A3|&lt;a4&gt;A4|&lt;5v&gt;5V|&lt;gnd&gt;GND}}&quot;, fillcolor=lightgreen, style=filled];
+
+    // PN532
+    pn532 [label=&quot;{PN532 NFC Module|{&lt;irq&gt;IRQ|&lt;rst&gt;RST|&lt;ss&gt;SS|&lt;mosi&gt;MOSI|&lt;miso&gt;MISO|&lt;sck&gt;SCK|&lt;vcc&gt;VCC|&lt;gnd&gt;GND}}&quot;, fillcolor=lightyellow, style=filled];
+
+    // LCD
+    lcd [label=&quot;{16x2 LCD Display|{&lt;rs&gt;RS|&lt;e&gt;E|&lt;d4&gt;D4|&lt;d5&gt;D5|&lt;d6&gt;D6|&lt;d7&gt;D7|&lt;vdd&gt;VDD|&lt;vss&gt;VSS|&lt;v0&gt;V0}}&quot;, fillcolor=lightblue, style=filled];
+
+    // Buttons
+    btn_up [label=&quot;Button UP&quot;, shape=box, fillcolor=orange, style=filled];
+    btn_down [label=&quot;Button DOWN&quot;, shape=box, fillcolor=orange, style=filled];
+    btn_select [label=&quot;Button SELECT&quot;, shape=box, fillcolor=orange, style=filled];
+    btn_back [label=&quot;Button BACK&quot;, shape=box, fillcolor=orange, style=filled];
+
+    // Relay
+    relay [label=&quot;{Relay Module|{&lt;in&gt;IN|&lt;vcc&gt;VCC|&lt;gnd&gt;GND}}&quot;, fillcolor=pink, style=filled];
+
+    // Potentiometer
+    pot [label=&quot;10kΩ POT\n(Contrast)&quot;, shape=ellipse, fillcolor=lightgray, style=filled];
+
+    // Power
+    power_5v [label=&quot;5V&quot;, shape=ellipse, fillcolor=red, style=filled];
+    power_gnd [label=&quot;GND&quot;, shape=ellipse, fillcolor=black, style=filled, fontcolor=white];
+
+    // Connections
+    arduino:d2 -&gt; pn532:irq [label=&quot;IRQ&quot;];
+    arduino:d3 -&gt; pn532:rst [label=&quot;RST&quot;];
+    arduino:d10 -&gt; pn532:ss [label=&quot;SS&quot;];
+    arduino:d11 -&gt; pn532:mosi [label=&quot;MOSI&quot;];
+    arduino:d12 -&gt; pn532:miso [label=&quot;MISO&quot;];
+    arduino:d13 -&gt; pn532:sck [label=&quot;SCK&quot;];
+
+    arduino:d4 -&gt; lcd:rs [label=&quot;RS&quot;];
+    arduino:d5 -&gt; lcd:e [label=&quot;E&quot;];
+    arduino:d6 -&gt; lcd:d4 [label=&quot;D4&quot;];
+    arduino:d7 -&gt; lcd:d5 [label=&quot;D5&quot;];
+    arduino:d8 -&gt; lcd:d6 [label=&quot;D6&quot;];
+    arduino:d9 -&gt; lcd:d7 [label=&quot;D7&quot;];
+
+    arduino:a0 -&gt; btn_up [label=&quot;UP&quot;];
+    arduino:a1 -&gt; btn_down [label=&quot;DOWN&quot;];
+    arduino:a2 -&gt; btn_select [label=&quot;SELECT&quot;];
+    arduino:a3 -&gt; btn_back [label=&quot;BACK&quot;];
+
+    arduino:a4 -&gt; relay:in [label=&quot;Control&quot;];
+
+    arduino:5v -&gt; power_5v;
+    arduino:gnd -&gt; power_gnd;
+
+    power_5v -&gt; pn532:vcc;
+    power_5v -&gt; lcd:vdd;
+    power_5v -&gt; relay:vcc;
+
+    power_gnd -&gt; pn532:gnd;
+    power_gnd -&gt; lcd:vss;
+    power_gnd -&gt; relay:gnd;
+
+    pot -&gt; lcd:v0 [label=&quot;Contrast&quot;];
+}</p></object></div>
+<figcaption>
+<p><span class="caption-text">Hardware Connection Diagram</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A complete wiring diagram in Fritzing format is available in the
+<code class="docutils literal notranslate"><span class="pre">hardware/</span></code> directory of the project repository.</p>
+</div>
+</section>
+<section id="power-considerations">
+<h2>Power Considerations<a class="headerlink" href="#power-considerations" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>The complete system draws approximately 200mA under normal operation</p></li>
+<li><p>Peak current during relay activation can reach 300mA</p></li>
+<li><p>Use a stable 5V power supply rated for at least 500mA</p></li>
+<li><p>If using USB power, ensure your USB port can supply sufficient current</p></li>
+<li><p>For production use, consider an external 5V power adapter</p></li>
+</ul>
+</section>
+<section id="assembly-tips">
+<h2>Assembly Tips<a class="headerlink" href="#assembly-tips" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Test Components Individually</strong>: Before final assembly, test each component
+separately to ensure they work correctly.</p></li>
+<li><p><strong>Use a Breadboard First</strong>: Prototype on a breadboard before creating a
+permanent solution.</p></li>
+<li><p><strong>Check Connections</strong>: Double-check all wiring before applying power,
+especially power and ground connections.</p></li>
+<li><p><strong>PN532 Mode Configuration</strong>: Verify the PN532 is in SPI mode before
+connecting.</p></li>
+<li><p><strong>LCD Contrast</strong>: Adjust the contrast potentiometer so LCD text is clearly
+visible.</p></li>
+<li><p><strong>Button Debouncing</strong>: The software includes debouncing, but clean button
+contacts improve reliability.</p></li>
+</ol>
+</section>
+<section id="troubleshooting-hardware-issues">
+<h2>Troubleshooting Hardware Issues<a class="headerlink" href="#troubleshooting-hardware-issues" title="Link to this heading"></a></h2>
+<section id="lcd-not-displaying">
+<h3>LCD Not Displaying<a class="headerlink" href="#lcd-not-displaying" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Check power connections (VDD and GND)</p></li>
+<li><p>Adjust contrast potentiometer</p></li>
+<li><p>Verify data pin connections (D4-D7)</p></li>
+<li><p>Check RS and E pin connections</p></li>
+</ul>
+</section>
+<section id="pn532-not-detected">
+<h3>PN532 Not Detected<a class="headerlink" href="#pn532-not-detected" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Verify PN532 is in SPI mode</p></li>
+<li><p>Check SPI connections (SCK, MISO, MOSI, SS)</p></li>
+<li><p>Ensure power supply is adequate</p></li>
+<li><p>Try resetting the module (RST pin)</p></li>
+</ul>
+</section>
+<section id="buttons-not-responding">
+<h3>Buttons Not Responding<a class="headerlink" href="#buttons-not-responding" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Verify button wiring and pull-down resistors</p></li>
+<li><p>Check for proper ground connection</p></li>
+<li><p>Test buttons with a multimeter</p></li>
+<li><p>Ensure analog pins are correctly defined in Config.h</p></li>
+</ul>
+</section>
+<section id="relay-not-activating">
+<h3>Relay Not Activating<a class="headerlink" href="#relay-not-activating" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Check relay control pin connection</p></li>
+<li><p>Verify relay power supply</p></li>
+<li><p>Test relay module independently</p></li>
+<li><p>Check if relay is configured correctly (NO vs NC)</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="examples.html" class="btn btn-neutral float-left" title="Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RWU Student Project.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

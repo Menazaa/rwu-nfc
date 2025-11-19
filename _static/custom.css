@@ -1,0 +1,14 @@
+/* Increase RTD theme content width */
+.wy-nav-content {
+    max-width: 1200px !important;
+}
+
+/* Make diagrams responsive */
+.graphviz img,
+.graphviz svg,
+.uml img,
+.uml svg {
+    max-width: 100%;
+    height: auto;
+}
+

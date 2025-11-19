@@ -1,0 +1,1046 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Card Cloning Technology &mdash; NFC Access Control System 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=467e753e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Troubleshooting" href="troubleshooting.html" />
+    <link rel="prev" title="EEPROM Memory Layout" href="eeprom.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NFC Access Control System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-evolution">Project Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#what-is-nfc">What is NFC?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#system-architecture">System Architecture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#hardware-layer">Hardware Layer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#software-layer">Software Layer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#design-philosophy">Design Philosophy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#security-first">Security First</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#user-friendly">User Friendly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#educational-value">Educational Value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#flexibility">Flexibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#reliability">Reliability</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#use-cases">Use Cases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#educational-applications">Educational Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#practical-applications">Practical Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#technical-specifications">Technical Specifications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#hardware-requirements">Hardware Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#software-capabilities">Software Capabilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#performance-metrics">Performance Metrics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-structure">Project Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id1">Hardware Layer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id2">Software Layer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#id3">Design Philosophy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id4">Security First</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id5">User Friendly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id6">Educational Value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id7">Flexibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id8">Reliability</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#id9">Use Cases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id10">Educational Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id11">Practical Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#id12">Technical Specifications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id13">Hardware Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id14">Software Capabilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id15">Performance Metrics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#id16">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#id17">Project Structure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#course-tasks-overview">Course Tasks Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#task-1-reading-nfc-tags">Task 1: Reading NFC Tags</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#learning-objectives">Learning Objectives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#example-code-read-example-cpp">Example Code: read_example.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#key-concepts">Key Concepts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#running-the-example">Running the Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#expected-output">Expected Output</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#task-2-writing-to-nfc-tags">Task 2: Writing to NFC Tags</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#id1">Learning Objectives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#example-code-write-example-cpp">Example Code: write_example.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#card-storage-structures">Card Storage Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#write-functions-reference">Write Functions Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#id2">Running the Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#safety-tips">Safety Tips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#common-issues-and-solutions">Common Issues and Solutions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#advanced-topics">Advanced Topics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#card-cloning">Card Cloning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#ndef-messages">NDEF Messages</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#next-steps">Next Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#tips-for-development">Tips for Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#see-also">See Also</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">Hardware Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#required-components">Required Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#core-components">Core Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#additional-components">Additional Components</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#pin-configuration">Pin Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#pn532-nfc-module-spi-mode">PN532 NFC Module (SPI Mode)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#lcd-display-4-bit-parallel">LCD Display (4-bit Parallel)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#navigation-buttons">Navigation Buttons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#relay-module">Relay Module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#wiring-diagram">Wiring Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#power-considerations">Power Considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#assembly-tips">Assembly Tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#troubleshooting-hardware-issues">Troubleshooting Hardware Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#lcd-not-displaying">LCD Not Displaying</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#pn532-not-detected">PN532 Not Detected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#buttons-not-responding">Buttons Not Responding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#relay-not-activating">Relay Not Activating</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#prerequisites">Prerequisites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#required-software">Required Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#recommended-tools">Recommended Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#setting-up-platformio">Setting Up PlatformIO</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#option-1-platformio-ide-recommended">Option 1: PlatformIO IDE (Recommended)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#option-2-platformio-core-cli">Option 2: PlatformIO Core (CLI)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#getting-the-source-code">Getting the Source Code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#clone-from-repository">Clone from Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#download-zip">Download ZIP</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#project-structure">Project Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#pin-configuration">Pin Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#building-the-firmware">Building the Firmware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#using-platformio-ide">Using PlatformIO IDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#using-platformio-cli">Using PlatformIO CLI</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#uploading-to-arduino">Uploading to Arduino</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#preparing-the-arduino">Preparing the Arduino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#id1">Using PlatformIO IDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#specifying-upload-port">Specifying Upload Port</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#monitoring-serial-output">Monitoring Serial Output</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#using-platformio">Using PlatformIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#using-arduino-ide-serial-monitor">Using Arduino IDE Serial Monitor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#troubleshooting-installation">Troubleshooting Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#build-errors">Build Errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#upload-errors">Upload Errors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#verification">Verification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#system-startup">System Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#normal-operation">Normal Operation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#scanning-cards">Scanning Cards</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#menu-system">Menu System</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#accessing-the-menu">Accessing the Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#menu-navigation">Menu Navigation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#main-menu-items">Main Menu Items</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#card-management">Card Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#registering-a-new-card">Registering a New Card</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#deleting-a-card">Deleting a Card</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#listing-stored-cards">Listing Stored Cards</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#advanced-features">Advanced Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#card-cloning">Card Cloning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#system-information">System Information</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#customization">Customization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#access-duration">Access Duration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#button-configuration">Button Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#card-capacity">Card Capacity</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#best-practices">Best Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#regular-operation">Regular Operation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#id1">Card Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#system-maintenance">System Maintenance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#security-considerations">Security Considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#physical-security">Physical Security</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#access-control">Access Control</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#serial-output">Serial Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#troubleshooting-common-issues">Troubleshooting Common Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#card-not-reading">Card Not Reading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#false-readings">False Readings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#menu-not-responding">Menu Not Responding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#relay-not-activating">Relay Not Activating</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="diagrams.html">Class Diagrams</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#system-architecture-overview">System Architecture Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#accesscontrolsystem-class">AccessControlSystem Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#nfcreader-class">NFCReader Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#complete-system-relationships">Complete System Relationships</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#state-machine">State Machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#card-registration-flow">Card Registration Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#card-cloning-flow">Card Cloning Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#mifare-memory-layout">MIFARE Memory Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#installation-and-usage">Installation and Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#see-also">See Also</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.html#core-classes">Core Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.html#accesscontrolsystem">AccessControlSystem</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api.html#_CPPv419AccessControlSystem"><code class="docutils literal notranslate"><span class="pre">AccessControlSystem</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#nfcreader">NFCReader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api.html#_CPPv49NFCReader"><code class="docutils literal notranslate"><span class="pre">NFCReader</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#enumerations">Enumerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.html#nfccommmode">NFCCommMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#nfcreadmode">NFCReadMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#nfccardtype">NFCCardType</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#data-structures">Data Structures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.html#nfccardinfo">NFCCardInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#nfcwriteresult">NFCWriteResult</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#systemstate">SystemState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#state-machine-diagram">State Machine Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#menuitem">MenuItem</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#configuration-constants">Configuration Constants</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.html#hardware-pin-definitions">Hardware Pin Definitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#system-parameters">System Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#eeprom-memory-map">EEPROM Memory Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#custom-sector-configuration">Custom Sector Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#example-usage">Example Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.html#basic-setup">Basic Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#custom-card-handling">Custom Card Handling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#manual-card-registration">Manual Card Registration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#return-values">Return Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#memory-considerations">Memory Considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.html#eeprom-usage">EEPROM Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#ram-usage">RAM Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#thread-safety">Thread Safety</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#debugging">Debugging</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eeprom.html">EEPROM Memory Layout</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eeprom.html#memory-map-overview">Memory Map Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eeprom.html#memory-regions">Memory Regions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#header-section">Header Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#card-data-section">Card Data Section</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="eeprom.html#memory-operations">Memory Operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#read-operation-flow">Read Operation Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#write-operation-flow">Write Operation Flow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="eeprom.html#memory-wear-leveling">Memory Wear Leveling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#write-frequency-estimation">Write Frequency Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#best-practices">Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="eeprom.html#memory-initialization">Memory Initialization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#first-time-setup">First-Time Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#code-example">Code Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="eeprom.html#memory-debugging">Memory Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eeprom.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Card Cloning Technology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-it-works">How It Works</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dual-uid-system">Dual UID System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reading-priority">Reading Priority</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#custom-sector-structure">Custom Sector Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sector-1-layout">Sector 1 Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#block-4-structure-uid-block">Block 4 Structure (UID Block)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#block-5-structure-metadata-block">Block 5 Structure (Metadata Block)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cloning-process">Cloning Process</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-by-step-procedure">Step-by-Step Procedure</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#code-implementation">Code Implementation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nfcreader-clonecard-method">NFCReader::cloneCard() Method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reading-cloned-uid">Reading Cloned UID</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#security-considerations">Security Considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#authentication-keys">Authentication Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#access-control">Access Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#physical-security">Physical Security</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#limitations">Limitations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#card-compatibility">Card Compatibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#key-requirements">Key Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#write-limitations">Write Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#advantages-over-magic-cards">Advantages Over Magic Cards</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#traditional-magic-cards">Traditional “Magic” Cards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#our-custom-sector-approach">Our Custom Sector Approach</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#best-practices">Best Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cloning-workflow">Cloning Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#error-handling">Error Handling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#storage-management">Storage Management</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced-topics">Advanced Topics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#multi-identity-cards">Multi-Identity Cards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#encrypted-clones">Encrypted Clones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#time-limited-clones">Time-Limited Clones</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#example-use-cases">Example Use Cases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#backup-access-card">Backup Access Card</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#temporary-access">Temporary Access</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#multi-location-access">Multi-Location Access</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#testing-and-validation">Testing and Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting-cloning-issues">Troubleshooting Cloning Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#hardware-issues">Hardware Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#pn532-module-not-detected">PN532 Module Not Detected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#lcd-display-issues">LCD Display Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#button-problems">Button Problems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#relay-issues">Relay Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#card-reading-issues">Card Reading Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#cards-not-detected">Cards Not Detected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#specific-card-types">Specific Card Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#software-issues">Software Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#compilation-errors">Compilation Errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#upload-failures">Upload Failures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#runtime-errors">Runtime Errors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#cloning-issues">Cloning Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#authentication-failed">Authentication Failed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#write-failed">Write Failed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#verification-failed">Verification Failed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#cloned-card-not-working">Cloned Card Not Working</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#access-control-issues">Access Control Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#authorized-card-denied">Authorized Card Denied</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#unauthorized-card-granted">Unauthorized Card Granted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#relay-timing-issues">Relay Timing Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#menu-system-issues">Menu System Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#menu-not-accessible">Menu Not Accessible</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#cannot-exit-menu">Cannot Exit Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#cards-not-listing">Cards Not Listing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#diagnostic-tools">Diagnostic Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#serial-monitor-output">Serial Monitor Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#testing-individual-components">Testing Individual Components</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#common-error-codes">Common Error Codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#getting-help">Getting Help</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#before-seeking-support">Before Seeking Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#information-to-provide">Information to Provide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#support-channels">Support Channels</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start - Building Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#building">Building</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#html-documentation-recommended">HTML Documentation (Recommended)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#pdf-documentation">PDF Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#viewing">Viewing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#cleaning">Cleaning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#common-issues">Common Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#importerror-no-module-named-sphinx">ImportError: No module named sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#sphinx-build-command-not-found">sphinx-build command not found</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#theme-not-found">Theme not found</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#latex-errors-when-building-pdf">LaTeX errors when building PDF</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#tips">Tips</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NFC Access Control System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Card Cloning Technology</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/card_cloning.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="card-cloning-technology">
+<h1>Card Cloning Technology<a class="headerlink" href="#card-cloning-technology" title="Link to this heading"></a></h1>
+<p>This section provides detailed technical information about the advanced card
+cloning capabilities of the NFC Access Control System.</p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>The system implements a sophisticated card cloning mechanism that allows
+copying NFC card credentials without requiring special “magic” or “UID
+changeable” cards. This is achieved through custom sector technology that
+stores cloned UIDs in a writable sector of standard Mifare Classic cards.</p>
+</section>
+<section id="how-it-works">
+<h2>How It Works<a class="headerlink" href="#how-it-works" title="Link to this heading"></a></h2>
+<section id="dual-uid-system">
+<h3>Dual UID System<a class="headerlink" href="#dual-uid-system" title="Link to this heading"></a></h3>
+<p>Every Mifare Classic card has two potential UIDs:</p>
+<ol class="arabic simple">
+<li><p><strong>Physical UID</strong> (Block 0, Sector 0)</p>
+<ul class="simple">
+<li><p>Manufacturer-assigned unique identifier</p></li>
+<li><p>Stored in Block 0 (read-only on standard cards)</p></li>
+<li><p>Cannot be changed on regular cards</p></li>
+<li><p>4 or 7 bytes in length</p></li>
+</ul>
+</li>
+<li><p><strong>Cloned UID</strong> (Block 4, Sector 1)</p>
+<ul class="simple">
+<li><p>Custom UID stored in writable sector</p></li>
+<li><p>Stored in our custom sector (Sector 1)</p></li>
+<li><p>Can be written to any standard Mifare Classic card</p></li>
+<li><p>Emulates a different card’s identity</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="reading-priority">
+<h3>Reading Priority<a class="headerlink" href="#reading-priority" title="Link to this heading"></a></h3>
+<p>When scanning a card, the system:</p>
+<ol class="arabic simple">
+<li><p>First attempts to read the cloned UID from Sector 1</p></li>
+<li><p>If a cloned UID exists and is valid, it uses that</p></li>
+<li><p>If no cloned UID exists, it falls back to the physical UID</p></li>
+<li><p>This allows cloned cards to impersonate their source cards</p></li>
+</ol>
+</section>
+</section>
+<section id="custom-sector-structure">
+<h2>Custom Sector Structure<a class="headerlink" href="#custom-sector-structure" title="Link to this heading"></a></h2>
+<section id="sector-1-layout">
+<h3>Sector 1 Layout<a class="headerlink" href="#sector-1-layout" title="Link to this heading"></a></h3>
+<p>The system uses Sector 1 (blocks 4-7) for cloning data:</p>
+<figure class="align-default" id="id1">
+<div class="graphviz"><object data="_images/graphviz-0f990233e8fce8e2a34ade4f91962aa4fa09bd89.svg" type="image/svg+xml" class="graphviz">
+<p class="warning">digraph memory_structure {
+    rankdir=TB;
+    node [shape=record];
+
+    subgraph cluster_sector0 {
+        label=&quot;Sector 0 (Manufacturer)&quot;;
+        style=filled;
+        color=lightcoral;
+
+        block0 [label=&quot;{Block 0|Physical UID\n(Read-Only)|Manufacturer Data}&quot;, fillcolor=pink, style=filled];
+        block1 [label=&quot;{Block 1|Data}&quot;, fillcolor=white, style=filled];
+        block2 [label=&quot;{Block 2|Data}&quot;, fillcolor=white, style=filled];
+        block3 [label=&quot;{Block 3|Sector Trailer\n(Keys \&amp; Access)}&quot;, fillcolor=lightgray, style=filled];
+    }
+
+    subgraph cluster_sector1 {
+        label=&quot;Sector 1 (Custom - Used for Cloning)&quot;;
+        style=filled;
+        color=lightgreen;
+
+        block4 [label=&quot;{Block 4|Cloned UID Storage\nByte 0: Length (4/7)\nBytes 1-7: UID Data}&quot;, fillcolor=yellow, style=filled];
+        block5 [label=&quot;{Block 5|Metadata\nTimestamp, Flags\nChecksum}&quot;, fillcolor=lightyellow, style=filled];
+        block6 [label=&quot;{Block 6|Reserved\n(Future Use)}&quot;, fillcolor=white, style=filled];
+        block7 [label=&quot;{Block 7|Sector Trailer\n(Keys \&amp; Access)}&quot;, fillcolor=lightgray, style=filled];
+    }
+
+    subgraph cluster_other {
+        label=&quot;Sectors 2-15 (Standard Data Storage)&quot;;
+        style=filled;
+        color=lightblue;
+
+        others [label=&quot;Blocks 8-63\nAvailable for\nOther Applications&quot;, fillcolor=lightcyan, style=filled];
+    }
+
+    block0 -&gt; block1 -&gt; block2 -&gt; block3 [style=invis];
+    block3 -&gt; block4 [label=&quot;Sector Boundary&quot;, style=dashed];
+    block4 -&gt; block5 -&gt; block6 -&gt; block7 [style=invis];
+    block7 -&gt; others [label=&quot;More Sectors...&quot;, style=dashed];
+}</p></object></div>
+<figcaption>
+<p><span class="caption-text">Mifare Classic Memory Structure with Custom Sector</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Block</p></th>
+<th class="head"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Block 4</p></td>
+<td><p>Cloned UID storage (7 bytes) + length marker (1 byte)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Block 5</p></td>
+<td><p>Metadata (timestamp, flags, checksum)</p></td>
+</tr>
+<tr class="row-even"><td><p>Block 6</p></td>
+<td><p>Reserved for future use</p></td>
+</tr>
+<tr class="row-odd"><td><p>Block 7</p></td>
+<td><p>Sector trailer (access bits and keys)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="block-4-structure-uid-block">
+<h3>Block 4 Structure (UID Block)<a class="headerlink" href="#block-4-structure-uid-block" title="Link to this heading"></a></h3>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Byte 0: UID Length (0x04 or 0x07)
+Bytes 1-7: Cloned UID data (padded with 0xFF if &lt; 7 bytes)
+Bytes 8-15: Reserved (0xFF)
+</pre></div>
+</div>
+<p>Example for 4-byte UID:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">04</span> <span class="n">AB</span> <span class="mi">12</span> <span class="n">CD</span> <span class="mi">34</span> <span class="n">FF</span> <span class="n">FF</span> <span class="n">FF</span> <span class="n">FF</span> <span class="n">FF</span> <span class="n">FF</span> <span class="n">FF</span> <span class="n">FF</span> <span class="n">FF</span> <span class="n">FF</span> <span class="n">FF</span>
+</pre></div>
+</div>
+<p>Example for 7-byte UID:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">07</span> <span class="mi">04</span> <span class="n">AB</span> <span class="mi">12</span> <span class="mi">34</span> <span class="mi">56</span> <span class="n">CD</span> <span class="n">EF</span> <span class="n">FF</span> <span class="n">FF</span> <span class="n">FF</span> <span class="n">FF</span> <span class="n">FF</span> <span class="n">FF</span> <span class="n">FF</span> <span class="n">FF</span>
+</pre></div>
+</div>
+</section>
+<section id="block-5-structure-metadata-block">
+<h3>Block 5 Structure (Metadata Block)<a class="headerlink" href="#block-5-structure-metadata-block" title="Link to this heading"></a></h3>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Bytes 0-3: Clone timestamp (Unix time, optional)
+Byte 4: Clone flags (validity, version)
+Byte 5: Checksum of UID block
+Bytes 6-15: Reserved
+</pre></div>
+</div>
+</section>
+</section>
+<section id="cloning-process">
+<h2>Cloning Process<a class="headerlink" href="#cloning-process" title="Link to this heading"></a></h2>
+<section id="step-by-step-procedure">
+<h3>Step-by-Step Procedure<a class="headerlink" href="#step-by-step-procedure" title="Link to this heading"></a></h3>
+<figure class="align-default" id="id2">
+<div class="graphviz"><object data="_images/graphviz-08c90b863c6655fa9ebd5006c30d863b19dcfaa1.svg" type="image/svg+xml" class="graphviz">
+<p class="warning">digraph cloning_process {
+    rankdir=TB;
+    node [shape=box, style=rounded];
+
+    start [label=&quot;Start Cloning&quot;, shape=ellipse, fillcolor=lightgreen, style=filled];
+    read_source [label=&quot;1. Read Source Card\nGet Physical UID&quot;, fillcolor=lightblue, style=filled];
+    store_source [label=&quot;Store Source UID\nin Memory&quot;, fillcolor=cyan, style=filled];
+    read_target [label=&quot;2. Read Target Card\nGet Physical UID&quot;, fillcolor=lightblue, style=filled];
+    verify_target [label=&quot;3. Verify Target is\nMifare Classic&quot;, fillcolor=yellow, style=filled];
+    auth [label=&quot;4. Authenticate\nto Sector 1\n(Default Key A)&quot;, fillcolor=orange, style=filled];
+    write_uid [label=&quot;5. Write Source UID\nto Block 4&quot;, fillcolor=pink, style=filled];
+    write_meta [label=&quot;6. Write Metadata\nto Block 5&quot;, fillcolor=pink, style=filled];
+    verify [label=&quot;7. Verify Write\nRead Back Block 4&quot;, fillcolor=violet, style=filled];
+    success [label=&quot;Clone Successful&quot;, shape=ellipse, fillcolor=green, style=filled, fontcolor=white];
+    fail [label=&quot;Clone Failed&quot;, shape=ellipse, fillcolor=red, style=filled, fontcolor=white];
+
+    start -&gt; read_source;
+    read_source -&gt; store_source;
+    store_source -&gt; read_target;
+    read_target -&gt; verify_target;
+    verify_target -&gt; auth [label=&quot;Valid&quot;];
+    verify_target -&gt; fail [label=&quot;Not Mifare\nClassic&quot;];
+    auth -&gt; write_uid [label=&quot;Success&quot;];
+    auth -&gt; fail [label=&quot;Auth Failed&quot;];
+    write_uid -&gt; write_meta [label=&quot;Success&quot;];
+    write_uid -&gt; fail [label=&quot;Write Failed&quot;];
+    write_meta -&gt; verify;
+    verify -&gt; success [label=&quot;Match&quot;];
+    verify -&gt; fail [label=&quot;Mismatch&quot;];
+}</p></object></div>
+<figcaption>
+<p><span class="caption-text">Card Cloning Process Flow</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p><strong>Read Source Card</strong></p>
+<ul class="simple">
+<li><p>User presents the source card to be cloned</p></li>
+<li><p>System reads the physical UID</p></li>
+<li><p>UID is stored in memory temporarily</p></li>
+</ul>
+</li>
+<li><p><strong>Read Target Card</strong></p>
+<ul class="simple">
+<li><p>User presents the target card (destination)</p></li>
+<li><p>System reads the target’s physical UID</p></li>
+<li><p>Verifies it’s a Mifare Classic card</p></li>
+</ul>
+</li>
+<li><p><strong>Authenticate to Sector 1</strong></p>
+<ul class="simple">
+<li><p>System authenticates using default Key A (0xFFFFFFFFFFFF)</p></li>
+<li><p>If authentication fails with default key, cloning cannot proceed</p></li>
+<li><p>Most new cards use default keys</p></li>
+</ul>
+</li>
+<li><p><strong>Write Cloned UID</strong></p>
+<ul class="simple">
+<li><p>Writes source UID to Block 4 of target card</p></li>
+<li><p>Writes metadata to Block 5</p></li>
+<li><p>Preserves original sector trailer (Block 7)</p></li>
+</ul>
+</li>
+<li><p><strong>Verify Write</strong></p>
+<ul class="simple">
+<li><p>Reads back Block 4 to verify successful write</p></li>
+<li><p>Compares with intended UID</p></li>
+<li><p>Reports success or failure</p></li>
+</ul>
+</li>
+<li><p><strong>Result</strong></p>
+<ul class="simple">
+<li><p>Target card now has both its physical UID and the cloned UID</p></li>
+<li><p>When scanned, system will read cloned UID first</p></li>
+<li><p>Card behaves as if it has the source card’s identity</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<section id="code-implementation">
+<h2>Code Implementation<a class="headerlink" href="#code-implementation" title="Link to this heading"></a></h2>
+<section id="nfcreader-clonecard-method">
+<h3>NFCReader::cloneCard() Method<a class="headerlink" href="#nfcreader-clonecard-method" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">NFCReader::cloneCard</span><span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="n">sourceUID</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">sourceLength</span><span class="p">,</span>
+<span class="w">                          </span><span class="kt">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="n">targetUID</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">targetLength</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 1. Prepare data block</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">blockData</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span>
+<span class="w">    </span><span class="n">memset</span><span class="p">(</span><span class="n">blockData</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">);</span>
+<span class="w">    </span><span class="n">blockData</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sourceLength</span><span class="p">;</span>
+<span class="w">    </span><span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">blockData</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">sourceUID</span><span class="p">,</span><span class="w"> </span><span class="n">sourceLength</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// 2. Authenticate to custom sector</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">key</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">};</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">pn532</span><span class="p">.</span><span class="n">mifareclassic_AuthenticateBlock</span><span class="p">(</span><span class="n">targetUID</span><span class="p">,</span><span class="w"> </span><span class="n">targetLength</span><span class="p">,</span>
+<span class="w">                                                 </span><span class="n">CUSTOM_BLOCK_UID</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// 3. Write UID to block</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">pn532</span><span class="p">.</span><span class="n">mifareclassic_WriteDataBlock</span><span class="p">(</span><span class="n">CUSTOM_BLOCK_UID</span><span class="p">,</span><span class="w"> </span><span class="n">blockData</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// 4. Write metadata block</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">metaData</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span>
+<span class="w">    </span><span class="n">memset</span><span class="p">(</span><span class="n">metaData</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">);</span>
+<span class="w">    </span><span class="n">metaData</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x01</span><span class="p">;</span><span class="w">  </span><span class="c1">// Valid flag</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">pn532</span><span class="p">.</span><span class="n">mifareclassic_WriteDataBlock</span><span class="p">(</span><span class="n">CUSTOM_BLOCK_META</span><span class="p">,</span><span class="w"> </span><span class="n">metaData</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// 5. Verify</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">verifyData</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">pn532</span><span class="p">.</span><span class="n">mifareclassic_ReadDataBlock</span><span class="p">(</span><span class="n">CUSTOM_BLOCK_UID</span><span class="p">,</span><span class="w"> </span><span class="n">verifyData</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">memcmp</span><span class="p">(</span><span class="n">blockData</span><span class="p">,</span><span class="w"> </span><span class="n">verifyData</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="reading-cloned-uid">
+<h3>Reading Cloned UID<a class="headerlink" href="#reading-cloned-uid" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">NFCReader::readClonedUID</span><span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="n">uid</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="n">uidLength</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">blockData</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">key</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">};</span>
+
+<span class="w">    </span><span class="c1">// Authenticate to custom sector</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">pn532</span><span class="p">.</span><span class="n">mifareclassic_AuthenticateBlock</span><span class="p">(</span><span class="n">currentUID</span><span class="p">,</span><span class="w"> </span><span class="n">currentUIDLength</span><span class="p">,</span>
+<span class="w">                                                 </span><span class="n">CUSTOM_BLOCK_UID</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Read UID block</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">pn532</span><span class="p">.</span><span class="n">mifareclassic_ReadDataBlock</span><span class="p">(</span><span class="n">CUSTOM_BLOCK_UID</span><span class="p">,</span><span class="w"> </span><span class="n">blockData</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Check if valid cloned UID exists</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">blockData</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mh">0x04</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">blockData</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mh">0x07</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w">  </span><span class="c1">// No valid cloned UID</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Extract UID</span>
+<span class="w">    </span><span class="o">*</span><span class="n">uidLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">blockData</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">    </span><span class="n">memcpy</span><span class="p">(</span><span class="n">uid</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">blockData</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="o">*</span><span class="n">uidLength</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="security-considerations">
+<h2>Security Considerations<a class="headerlink" href="#security-considerations" title="Link to this heading"></a></h2>
+<section id="authentication-keys">
+<h3>Authentication Keys<a class="headerlink" href="#authentication-keys" title="Link to this heading"></a></h3>
+<p>The cloning system relies on default Mifare Classic keys:</p>
+<ul class="simple">
+<li><p><strong>Key A</strong>: 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF</p></li>
+<li><p><strong>Key B</strong>: 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF</p></li>
+</ul>
+<p><strong>Security Implications</strong>:</p>
+<ul class="simple">
+<li><p>Cards using default keys can be cloned by anyone with this knowledge</p></li>
+<li><p>For production systems, change sector keys after cloning</p></li>
+<li><p>Consider using more secure NFC technologies (NTAG, DESFire)</p></li>
+</ul>
+</section>
+<section id="access-control">
+<h3>Access Control<a class="headerlink" href="#access-control" title="Link to this heading"></a></h3>
+<p><strong>Important Notes</strong>:</p>
+<ul class="simple">
+<li><p>Cloning should only be used for authorized purposes</p></li>
+<li><p>Original card owners should be notified</p></li>
+<li><p>Maintain logs of all cloning operations</p></li>
+<li><p>Consider legal and ethical implications</p></li>
+</ul>
+</section>
+<section id="physical-security">
+<h3>Physical Security<a class="headerlink" href="#physical-security" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Protect cards from unauthorized cloning</p></li>
+<li><p>Use tamper-evident holders for critical access cards</p></li>
+<li><p>Implement time-limited access credentials</p></li>
+<li><p>Monitor for duplicate card usage</p></li>
+</ul>
+</section>
+</section>
+<section id="limitations">
+<h2>Limitations<a class="headerlink" href="#limitations" title="Link to this heading"></a></h2>
+<section id="card-compatibility">
+<h3>Card Compatibility<a class="headerlink" href="#card-compatibility" title="Link to this heading"></a></h3>
+<p>The cloning feature works only with:</p>
+<ul class="simple">
+<li><p><strong>Mifare Classic 1K</strong>: Full support</p></li>
+<li><p><strong>Mifare Classic 4K</strong>: Full support (uses Sector 1)</p></li>
+<li><p><strong>Mifare Ultralight</strong>: Not supported (no sector structure)</p></li>
+<li><p><strong>NTAG</strong>: Not supported (different memory structure)</p></li>
+<li><p><strong>DESFire</strong>: Not supported (encrypted memory)</p></li>
+</ul>
+</section>
+<section id="key-requirements">
+<h3>Key Requirements<a class="headerlink" href="#key-requirements" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Target card must use default keys for Sector 1</p></li>
+<li><p>If sector keys have been changed, cloning will fail</p></li>
+<li><p>No method to recover custom keys without card manufacturer access</p></li>
+</ul>
+</section>
+<section id="write-limitations">
+<h3>Write Limitations<a class="headerlink" href="#write-limitations" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Standard cards can be written only ~100,000 times</p></li>
+<li><p>Excessive cloning operations may degrade card memory</p></li>
+<li><p>Always verify writes to ensure data integrity</p></li>
+</ul>
+</section>
+</section>
+<section id="advantages-over-magic-cards">
+<h2>Advantages Over Magic Cards<a class="headerlink" href="#advantages-over-magic-cards" title="Link to this heading"></a></h2>
+<section id="traditional-magic-cards">
+<h3>Traditional “Magic” Cards<a class="headerlink" href="#traditional-magic-cards" title="Link to this heading"></a></h3>
+<p>Traditional UID-changeable cards (Chinese Magic Cards):</p>
+<ul class="simple">
+<li><p>Expensive and harder to source</p></li>
+<li><p>Block 0 is writable, which is abnormal</p></li>
+<li><p>Easily detected by security systems</p></li>
+<li><p>Limited availability and reliability</p></li>
+</ul>
+</section>
+<section id="our-custom-sector-approach">
+<h3>Our Custom Sector Approach<a class="headerlink" href="#our-custom-sector-approach" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Works with any standard Mifare Classic card</p></li>
+<li><p>Cards are readily available and inexpensive</p></li>
+<li><p>Maintains normal Block 0 (appears as legitimate card)</p></li>
+<li><p>More flexible - can store multiple identities</p></li>
+<li><p>Reversible - can erase cloned UID and reuse card</p></li>
+</ul>
+</section>
+</section>
+<section id="best-practices">
+<h2>Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading"></a></h2>
+<section id="cloning-workflow">
+<h3>Cloning Workflow<a class="headerlink" href="#cloning-workflow" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Verify Source Card</strong>: Ensure source card is valid and readable</p></li>
+<li><p><strong>Use New Target Cards</strong>: Fresh cards more reliable than reused ones</p></li>
+<li><p><strong>Test After Cloning</strong>: Always verify cloned card works correctly</p></li>
+<li><p><strong>Document Clones</strong>: Maintain registry of cloned cards and their sources</p></li>
+<li><p><strong>Limit Scope</strong>: Clone only when necessary, prefer registering physical UIDs</p></li>
+</ol>
+</section>
+<section id="error-handling">
+<h3>Error Handling<a class="headerlink" href="#error-handling" title="Link to this heading"></a></h3>
+<p>Common errors and solutions:</p>
+<ul class="simple">
+<li><p><strong>Authentication Failed</strong>: Target card may use custom keys</p></li>
+<li><p><strong>Write Failed</strong>: Card may be damaged or write-protected</p></li>
+<li><p><strong>Verify Failed</strong>: Retry cloning operation</p></li>
+<li><p><strong>Invalid UID</strong>: Source UID format may be unsupported</p></li>
+</ul>
+</section>
+<section id="storage-management">
+<h3>Storage Management<a class="headerlink" href="#storage-management" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Mark cloned cards visually (sticker, marking)</p></li>
+<li><p>Store clones separately from originals</p></li>
+<li><p>Implement clone expiration dates in metadata</p></li>
+<li><p>Periodic verification of cloned card functionality</p></li>
+</ul>
+</section>
+</section>
+<section id="advanced-topics">
+<h2>Advanced Topics<a class="headerlink" href="#advanced-topics" title="Link to this heading"></a></h2>
+<section id="multi-identity-cards">
+<h3>Multi-Identity Cards<a class="headerlink" href="#multi-identity-cards" title="Link to this heading"></a></h3>
+<p>Future enhancement: Store multiple cloned UIDs in different sectors:</p>
+<ul class="simple">
+<li><p>Sector 1: Primary cloned identity</p></li>
+<li><p>Sector 2: Secondary identity</p></li>
+<li><p>Sector 3: Tertiary identity</p></li>
+<li><p>Switch between identities via menu option</p></li>
+</ul>
+</section>
+<section id="encrypted-clones">
+<h3>Encrypted Clones<a class="headerlink" href="#encrypted-clones" title="Link to this heading"></a></h3>
+<p>Potential security enhancement:</p>
+<ul class="simple">
+<li><p>Encrypt cloned UID with card-specific key</p></li>
+<li><p>Decrypt during read operation</p></li>
+<li><p>Prevents simple sector dumps from revealing UID</p></li>
+<li><p>Requires custom key management</p></li>
+</ul>
+</section>
+<section id="time-limited-clones">
+<h3>Time-Limited Clones<a class="headerlink" href="#time-limited-clones" title="Link to this heading"></a></h3>
+<p>Use metadata timestamp:</p>
+<ul class="simple">
+<li><p>Store clone creation time</p></li>
+<li><p>Check expiration during read</p></li>
+<li><p>Automatically invalidate old clones</p></li>
+<li><p>Useful for temporary access credentials</p></li>
+</ul>
+</section>
+</section>
+<section id="example-use-cases">
+<h2>Example Use Cases<a class="headerlink" href="#example-use-cases" title="Link to this heading"></a></h2>
+<section id="backup-access-card">
+<h3>Backup Access Card<a class="headerlink" href="#backup-access-card" title="Link to this heading"></a></h3>
+<p>Clone an office access card to create a backup:</p>
+<ol class="arabic simple">
+<li><p>Clone office card to blank card</p></li>
+<li><p>Store backup securely at home</p></li>
+<li><p>Use if primary card is lost</p></li>
+<li><p>Invalidate backup when primary is recovered</p></li>
+</ol>
+</section>
+<section id="temporary-access">
+<h3>Temporary Access<a class="headerlink" href="#temporary-access" title="Link to this heading"></a></h3>
+<p>Grant temporary access without issuing new cards:</p>
+<ol class="arabic simple">
+<li><p>Clone authorized person’s card</p></li>
+<li><p>Give clone to temporary worker/visitor</p></li>
+<li><p>Collect clone when access expires</p></li>
+<li><p>Erase cloned UID for reuse</p></li>
+</ol>
+</section>
+<section id="multi-location-access">
+<h3>Multi-Location Access<a class="headerlink" href="#multi-location-access" title="Link to this heading"></a></h3>
+<p>Single card for multiple facilities:</p>
+<ol class="arabic simple">
+<li><p>Clone cards from different locations</p></li>
+<li><p>Store in different sectors</p></li>
+<li><p>Use appropriate identity per location</p></li>
+<li><p>Maintain audit trail of usage</p></li>
+</ol>
+</section>
+</section>
+<section id="testing-and-validation">
+<h2>Testing and Validation<a class="headerlink" href="#testing-and-validation" title="Link to this heading"></a></h2>
+<p>After cloning, verify:</p>
+<ul class="simple">
+<li><p>Cloned card grants access correctly</p></li>
+<li><p>Original card still functions</p></li>
+<li><p>Both cards recognized by system</p></li>
+<li><p>Access logs show correct attribution</p></li>
+</ul>
+</section>
+<section id="troubleshooting-cloning-issues">
+<h2>Troubleshooting Cloning Issues<a class="headerlink" href="#troubleshooting-cloning-issues" title="Link to this heading"></a></h2>
+<p>See <a class="reference internal" href="troubleshooting.html"><span class="doc">Troubleshooting</span></a> for detailed cloning error resolution.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="eeprom.html" class="btn btn-neutral float-left" title="EEPROM Memory Layout" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="troubleshooting.html" class="btn btn-neutral float-right" title="Troubleshooting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RWU Student Project.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

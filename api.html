@@ -1,0 +1,1219 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Reference &mdash; NFC Access Control System 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=467e753e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="EEPROM Memory Layout" href="eeprom.html" />
+    <link rel="prev" title="Class Diagrams" href="diagrams.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NFC Access Control System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-evolution">Project Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#what-is-nfc">What is NFC?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#system-architecture">System Architecture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#hardware-layer">Hardware Layer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#software-layer">Software Layer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#design-philosophy">Design Philosophy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#security-first">Security First</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#user-friendly">User Friendly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#educational-value">Educational Value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#flexibility">Flexibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#reliability">Reliability</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#use-cases">Use Cases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#educational-applications">Educational Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#practical-applications">Practical Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#technical-specifications">Technical Specifications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#hardware-requirements">Hardware Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#software-capabilities">Software Capabilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#performance-metrics">Performance Metrics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-structure">Project Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id1">Hardware Layer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id2">Software Layer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#id3">Design Philosophy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id4">Security First</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id5">User Friendly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id6">Educational Value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id7">Flexibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id8">Reliability</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#id9">Use Cases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id10">Educational Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id11">Practical Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#id12">Technical Specifications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id13">Hardware Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id14">Software Capabilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#id15">Performance Metrics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#id16">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#id17">Project Structure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#course-tasks-overview">Course Tasks Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#task-1-reading-nfc-tags">Task 1: Reading NFC Tags</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#learning-objectives">Learning Objectives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#example-code-read-example-cpp">Example Code: read_example.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#key-concepts">Key Concepts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#running-the-example">Running the Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#expected-output">Expected Output</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#task-2-writing-to-nfc-tags">Task 2: Writing to NFC Tags</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#id1">Learning Objectives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#example-code-write-example-cpp">Example Code: write_example.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#card-storage-structures">Card Storage Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#write-functions-reference">Write Functions Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#id2">Running the Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#safety-tips">Safety Tips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#common-issues-and-solutions">Common Issues and Solutions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#advanced-topics">Advanced Topics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#card-cloning">Card Cloning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#ndef-messages">NDEF Messages</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#next-steps">Next Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#tips-for-development">Tips for Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#see-also">See Also</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">Hardware Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#required-components">Required Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#core-components">Core Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#additional-components">Additional Components</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#pin-configuration">Pin Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#pn532-nfc-module-spi-mode">PN532 NFC Module (SPI Mode)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#lcd-display-4-bit-parallel">LCD Display (4-bit Parallel)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#navigation-buttons">Navigation Buttons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#relay-module">Relay Module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#wiring-diagram">Wiring Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#power-considerations">Power Considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#assembly-tips">Assembly Tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#troubleshooting-hardware-issues">Troubleshooting Hardware Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#lcd-not-displaying">LCD Not Displaying</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#pn532-not-detected">PN532 Not Detected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#buttons-not-responding">Buttons Not Responding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#relay-not-activating">Relay Not Activating</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#prerequisites">Prerequisites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#required-software">Required Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#recommended-tools">Recommended Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#setting-up-platformio">Setting Up PlatformIO</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#option-1-platformio-ide-recommended">Option 1: PlatformIO IDE (Recommended)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#option-2-platformio-core-cli">Option 2: PlatformIO Core (CLI)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#getting-the-source-code">Getting the Source Code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#clone-from-repository">Clone from Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#download-zip">Download ZIP</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#project-structure">Project Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#pin-configuration">Pin Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#building-the-firmware">Building the Firmware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#using-platformio-ide">Using PlatformIO IDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#using-platformio-cli">Using PlatformIO CLI</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#uploading-to-arduino">Uploading to Arduino</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#preparing-the-arduino">Preparing the Arduino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#id1">Using PlatformIO IDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#specifying-upload-port">Specifying Upload Port</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#monitoring-serial-output">Monitoring Serial Output</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#using-platformio">Using PlatformIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#using-arduino-ide-serial-monitor">Using Arduino IDE Serial Monitor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#troubleshooting-installation">Troubleshooting Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#build-errors">Build Errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#upload-errors">Upload Errors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#verification">Verification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#system-startup">System Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#normal-operation">Normal Operation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#scanning-cards">Scanning Cards</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#menu-system">Menu System</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#accessing-the-menu">Accessing the Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#menu-navigation">Menu Navigation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#main-menu-items">Main Menu Items</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#card-management">Card Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#registering-a-new-card">Registering a New Card</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#deleting-a-card">Deleting a Card</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#listing-stored-cards">Listing Stored Cards</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#advanced-features">Advanced Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#card-cloning">Card Cloning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#system-information">System Information</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#customization">Customization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#access-duration">Access Duration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#button-configuration">Button Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#card-capacity">Card Capacity</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#best-practices">Best Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#regular-operation">Regular Operation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#id1">Card Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#system-maintenance">System Maintenance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#security-considerations">Security Considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#physical-security">Physical Security</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#access-control">Access Control</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#serial-output">Serial Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#troubleshooting-common-issues">Troubleshooting Common Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#card-not-reading">Card Not Reading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#false-readings">False Readings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#menu-not-responding">Menu Not Responding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#relay-not-activating">Relay Not Activating</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="diagrams.html">Class Diagrams</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#system-architecture-overview">System Architecture Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#accesscontrolsystem-class">AccessControlSystem Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#nfcreader-class">NFCReader Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#complete-system-relationships">Complete System Relationships</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#state-machine">State Machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#card-registration-flow">Card Registration Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#card-cloning-flow">Card Cloning Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#mifare-memory-layout">MIFARE Memory Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#installation-and-usage">Installation and Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagrams.html#see-also">See Also</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#core-classes">Core Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#accesscontrolsystem">AccessControlSystem</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv419AccessControlSystem"><code class="docutils literal notranslate"><span class="pre">AccessControlSystem</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#nfcreader">NFCReader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv49NFCReader"><code class="docutils literal notranslate"><span class="pre">NFCReader</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#enumerations">Enumerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nfccommmode">NFCCommMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nfcreadmode">NFCReadMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nfccardtype">NFCCardType</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#data-structures">Data Structures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nfccardinfo">NFCCardInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nfcwriteresult">NFCWriteResult</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#systemstate">SystemState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#state-machine-diagram">State Machine Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#menuitem">MenuItem</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-constants">Configuration Constants</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hardware-pin-definitions">Hardware Pin Definitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#system-parameters">System Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eeprom-memory-map">EEPROM Memory Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-sector-configuration">Custom Sector Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#example-usage">Example Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basic-setup">Basic Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-card-handling">Custom Card Handling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manual-card-registration">Manual Card Registration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#return-values">Return Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#memory-considerations">Memory Considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eeprom-usage">EEPROM Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ram-usage">RAM Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#thread-safety">Thread Safety</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debugging">Debugging</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eeprom.html">EEPROM Memory Layout</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eeprom.html#memory-map-overview">Memory Map Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eeprom.html#memory-regions">Memory Regions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#header-section">Header Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#card-data-section">Card Data Section</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="eeprom.html#memory-operations">Memory Operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#read-operation-flow">Read Operation Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#write-operation-flow">Write Operation Flow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="eeprom.html#memory-wear-leveling">Memory Wear Leveling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#write-frequency-estimation">Write Frequency Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#best-practices">Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="eeprom.html#memory-initialization">Memory Initialization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#first-time-setup">First-Time Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eeprom.html#code-example">Code Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="eeprom.html#memory-debugging">Memory Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eeprom.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="card_cloning.html">Card Cloning Technology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#how-it-works">How It Works</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#dual-uid-system">Dual UID System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#reading-priority">Reading Priority</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#custom-sector-structure">Custom Sector Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#sector-1-layout">Sector 1 Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#block-4-structure-uid-block">Block 4 Structure (UID Block)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#block-5-structure-metadata-block">Block 5 Structure (Metadata Block)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#cloning-process">Cloning Process</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#step-by-step-procedure">Step-by-Step Procedure</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#code-implementation">Code Implementation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#nfcreader-clonecard-method">NFCReader::cloneCard() Method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#reading-cloned-uid">Reading Cloned UID</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#security-considerations">Security Considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#authentication-keys">Authentication Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#access-control">Access Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#physical-security">Physical Security</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#limitations">Limitations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#card-compatibility">Card Compatibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#key-requirements">Key Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#write-limitations">Write Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#advantages-over-magic-cards">Advantages Over Magic Cards</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#traditional-magic-cards">Traditional “Magic” Cards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#our-custom-sector-approach">Our Custom Sector Approach</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#best-practices">Best Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#cloning-workflow">Cloning Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#error-handling">Error Handling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#storage-management">Storage Management</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#advanced-topics">Advanced Topics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#multi-identity-cards">Multi-Identity Cards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#encrypted-clones">Encrypted Clones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#time-limited-clones">Time-Limited Clones</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#example-use-cases">Example Use Cases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#backup-access-card">Backup Access Card</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#temporary-access">Temporary Access</a></li>
+<li class="toctree-l3"><a class="reference internal" href="card_cloning.html#multi-location-access">Multi-Location Access</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#testing-and-validation">Testing and Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="card_cloning.html#troubleshooting-cloning-issues">Troubleshooting Cloning Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#hardware-issues">Hardware Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#pn532-module-not-detected">PN532 Module Not Detected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#lcd-display-issues">LCD Display Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#button-problems">Button Problems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#relay-issues">Relay Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#card-reading-issues">Card Reading Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#cards-not-detected">Cards Not Detected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#specific-card-types">Specific Card Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#software-issues">Software Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#compilation-errors">Compilation Errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#upload-failures">Upload Failures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#runtime-errors">Runtime Errors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#cloning-issues">Cloning Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#authentication-failed">Authentication Failed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#write-failed">Write Failed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#verification-failed">Verification Failed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#cloned-card-not-working">Cloned Card Not Working</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#access-control-issues">Access Control Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#authorized-card-denied">Authorized Card Denied</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#unauthorized-card-granted">Unauthorized Card Granted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#relay-timing-issues">Relay Timing Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#menu-system-issues">Menu System Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#menu-not-accessible">Menu Not Accessible</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#cannot-exit-menu">Cannot Exit Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#cards-not-listing">Cards Not Listing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#diagnostic-tools">Diagnostic Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#serial-monitor-output">Serial Monitor Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#testing-individual-components">Testing Individual Components</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#common-error-codes">Common Error Codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#getting-help">Getting Help</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#before-seeking-support">Before Seeking Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#information-to-provide">Information to Provide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#support-channels">Support Channels</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start - Building Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#building">Building</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#html-documentation-recommended">HTML Documentation (Recommended)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#pdf-documentation">PDF Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#viewing">Viewing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#cleaning">Cleaning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#common-issues">Common Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#importerror-no-module-named-sphinx">ImportError: No module named sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#sphinx-build-command-not-found">sphinx-build command not found</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#theme-not-found">Theme not found</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#latex-errors-when-building-pdf">LaTeX errors when building PDF</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#tips">Tips</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NFC Access Control System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">API Reference</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading"></a></h1>
+<p>This section provides detailed documentation of the classes, methods, and
+configuration options available in the NFC Access Control System.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For practical examples of using these APIs, see <a class="reference internal" href="examples.html"><span class="doc">Examples</span></a> which covers
+the basic read and write operations (Course Tasks 1 &amp; 2).</p>
+</div>
+<section id="core-classes">
+<h2>Core Classes<a class="headerlink" href="#core-classes" title="Link to this heading"></a></h2>
+<section id="accesscontrolsystem">
+<h3>AccessControlSystem<a class="headerlink" href="#accesscontrolsystem" title="Link to this heading"></a></h3>
+<p>The main class that manages the access control logic, menu system, and
+hardware interface.</p>
+<p><strong>Header</strong>: <code class="docutils literal notranslate"><span class="pre">include/AccessControlSystem.h</span></code></p>
+<p><strong>Public Methods</strong>:</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv419AccessControlSystem">
+<span id="_CPPv319AccessControlSystem"></span><span id="_CPPv219AccessControlSystem"></span><span id="AccessControlSystem"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AccessControlSystem</span></span></span><a class="headerlink" href="#_CPPv419AccessControlSystem" title="Link to this definition"></a><br /></dt>
+<dd><dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N19AccessControlSystem19AccessControlSystemEv">
+<span id="_CPPv3N19AccessControlSystem19AccessControlSystemEv"></span><span id="_CPPv2N19AccessControlSystem19AccessControlSystemEv"></span><span id="AccessControlSystem::AccessControlSystem"></span><span class="sig-name descname"><span class="n"><span class="pre">AccessControlSystem</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AccessControlSystem19AccessControlSystemEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Constructor. Initializes the access control system with default settings.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N19AccessControlSystem5beginEv">
+<span id="_CPPv3N19AccessControlSystem5beginEv"></span><span id="_CPPv2N19AccessControlSystem5beginEv"></span><span id="AccessControlSystem::begin"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">begin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AccessControlSystem5beginEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Initializes all hardware components (LCD, NFC reader, buttons, relay).
+Must be called in <code class="docutils literal notranslate"><span class="pre">setup()</span></code> before using the system.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N19AccessControlSystem6updateEv">
+<span id="_CPPv3N19AccessControlSystem6updateEv"></span><span id="_CPPv2N19AccessControlSystem6updateEv"></span><span id="AccessControlSystem::update"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AccessControlSystem6updateEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Main update loop. Should be called repeatedly in <code class="docutils literal notranslate"><span class="pre">loop()</span></code>.
+Handles state machine updates, button input, and card reading.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N19AccessControlSystem16isCardAuthorizedEP7uint8_t7uint8_t">
+<span id="_CPPv3N19AccessControlSystem16isCardAuthorizedEP7uint8_t7uint8_t"></span><span id="_CPPv2N19AccessControlSystem16isCardAuthorizedEP7uint8_t7uint8_t"></span><span id="AccessControlSystem::isCardAuthorized__uint8_tP.uint8_t"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isCardAuthorized</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">uid</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">uidLength</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AccessControlSystem16isCardAuthorizedEP7uint8_t7uint8_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Checks if a card UID is in the authorized list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>uid</strong> – Pointer to UID bytes array</p></li>
+<li><p><strong>uidLength</strong> – Length of UID (4 or 7 bytes)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if authorized, <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N19AccessControlSystem12registerCardEP7uint8_t7uint8_t">
+<span id="_CPPv3N19AccessControlSystem12registerCardEP7uint8_t7uint8_t"></span><span id="_CPPv2N19AccessControlSystem12registerCardEP7uint8_t7uint8_t"></span><span id="AccessControlSystem::registerCard__uint8_tP.uint8_t"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">registerCard</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">uid</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">uidLength</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AccessControlSystem12registerCardEP7uint8_t7uint8_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Adds a card to the authorized list in EEPROM.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>uid</strong> – Pointer to UID bytes array</p></li>
+<li><p><strong>uidLength</strong> – Length of UID (4 or 7 bytes)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if successful, <code class="docutils literal notranslate"><span class="pre">false</span></code> if card exists or storage full</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N19AccessControlSystem10deleteCardEP7uint8_t7uint8_t">
+<span id="_CPPv3N19AccessControlSystem10deleteCardEP7uint8_t7uint8_t"></span><span id="_CPPv2N19AccessControlSystem10deleteCardEP7uint8_t7uint8_t"></span><span id="AccessControlSystem::deleteCard__uint8_tP.uint8_t"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deleteCard</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">uid</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">uidLength</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AccessControlSystem10deleteCardEP7uint8_t7uint8_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Removes a card from the authorized list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>uid</strong> – Pointer to UID bytes array</p></li>
+<li><p><strong>uidLength</strong> – Length of UID (4 or 7 bytes)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if successful, <code class="docutils literal notranslate"><span class="pre">false</span></code> if card not found</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N19AccessControlSystem18getStoredCardCountEv">
+<span id="_CPPv3N19AccessControlSystem18getStoredCardCountEv"></span><span id="_CPPv2N19AccessControlSystem18getStoredCardCountEv"></span><span id="AccessControlSystem::getStoredCardCount"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getStoredCardCount</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AccessControlSystem18getStoredCardCountEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns the number of cards currently stored.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Number of authorized cards (0-40)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N19AccessControlSystem11grantAccessEv">
+<span id="_CPPv3N19AccessControlSystem11grantAccessEv"></span><span id="_CPPv2N19AccessControlSystem11grantAccessEv"></span><span id="AccessControlSystem::grantAccess"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">grantAccess</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AccessControlSystem11grantAccessEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Activates the relay for the configured duration.
+Called when an authorized card is detected.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N19AccessControlSystem10denyAccessEv">
+<span id="_CPPv3N19AccessControlSystem10denyAccessEv"></span><span id="_CPPv2N19AccessControlSystem10denyAccessEv"></span><span id="AccessControlSystem::denyAccess"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">denyAccess</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AccessControlSystem10denyAccessEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Displays access denied message.
+Called when an unauthorized card is detected.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="nfcreader">
+<h3>NFCReader<a class="headerlink" href="#nfcreader" title="Link to this heading"></a></h3>
+<p>Wrapper class for the PN532 NFC module, providing simplified card reading
+and cloning functionality.</p>
+<p><strong>Header</strong>: <code class="docutils literal notranslate"><span class="pre">include/NFCReader.h</span></code></p>
+<p><strong>Public Methods</strong>:</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv49NFCReader">
+<span id="_CPPv39NFCReader"></span><span id="_CPPv29NFCReader"></span><span id="NFCReader"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NFCReader</span></span></span><a class="headerlink" href="#_CPPv49NFCReader" title="Link to this definition"></a><br /></dt>
+<dd><dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NFCReader9NFCReaderE11NFCCommMode11NFCReadMode">
+<span id="_CPPv3N9NFCReader9NFCReaderE11NFCCommMode11NFCReadMode"></span><span id="_CPPv2N9NFCReader9NFCReaderE11NFCCommMode11NFCReadMode"></span><span id="NFCReader::NFCReader__NFCCommMode.NFCReadMode"></span><span class="sig-name descname"><span class="n"><span class="pre">NFCReader</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">NFCCommMode</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">commMode</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">NFCCommMode</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SPI</span></span>, <span class="n"><span class="pre">NFCReadMode</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">readMode</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">NFCReadMode</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">IRQ</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NFCReader9NFCReaderE11NFCCommMode11NFCReadMode" title="Link to this definition"></a><br /></dt>
+<dd><p>Constructor with communication and reading mode selection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>commMode</strong> – Communication mode (I2C or SPI)</p></li>
+<li><p><strong>readMode</strong> – Reading mode (POLLING or IRQ)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NFCReader5beginEv">
+<span id="_CPPv3N9NFCReader5beginEv"></span><span id="_CPPv2N9NFCReader5beginEv"></span><span id="NFCReader::begin"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">begin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NFCReader5beginEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Initializes the PN532 module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if initialization successful, <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NFCReader8readCardEv">
+<span id="_CPPv3N9NFCReader8readCardEv"></span><span id="_CPPv2N9NFCReader8readCardEv"></span><span id="NFCReader::readCard"></span><span class="n"><span class="pre">NFCCardInfo</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readCard</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NFCReader8readCardEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Reads a card and retrieves its complete information.
+Automatically uses cloned UID if present, otherwise physical UID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">NFCCardInfo</span></code> structure containing all card data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NFCReader13isCardPresentEv">
+<span id="_CPPv3N9NFCReader13isCardPresentEv"></span><span id="_CPPv2N9NFCReader13isCardPresentEv"></span><span id="NFCReader::isCardPresent"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isCardPresent</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NFCReader13isCardPresentEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Checks if a card is currently in the reader field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if card detected</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NFCReader14resetCardStateEv">
+<span id="_CPPv3N9NFCReader14resetCardStateEv"></span><span id="_CPPv2N9NFCReader14resetCardStateEv"></span><span id="NFCReader::resetCardState"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">resetCardState</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NFCReader14resetCardStateEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Resets the card detection state to allow re-reading the same card.
+Call this after processing a card to enable detection again.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NFCReader11writeStringERK6String7uint8_tb">
+<span id="_CPPv3N9NFCReader11writeStringERK6String7uint8_tb"></span><span id="_CPPv2N9NFCReader11writeStringERK6String7uint8_tb"></span><span id="NFCReader::writeString__StringCR.uint8_t.b"></span><span class="n"><span class="pre">NFCWriteResult</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeString</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">String</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">text</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">startAddress</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">verify</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NFCReader11writeStringERK6String7uint8_tb" title="Link to this definition"></a><br /></dt>
+<dd><p>Writes a string to the card, auto-detecting card type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – String to write</p></li>
+<li><p><strong>startAddress</strong> – Starting address (block or page depending on card type)</p></li>
+<li><p><strong>verify</strong> – Whether to verify the write operation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">NFCWriteResult</span></code> structure with success status</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NFCReader9writeDataEPK7uint8_t7uint8_t7uint8_tb">
+<span id="_CPPv3N9NFCReader9writeDataEPK7uint8_t7uint8_t7uint8_tb"></span><span id="_CPPv2N9NFCReader9writeDataEPK7uint8_t7uint8_t7uint8_tb"></span><span id="NFCReader::writeData__uint8_tCP.uint8_t.uint8_t.b"></span><span class="n"><span class="pre">NFCWriteResult</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeData</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dataLength</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">startAddress</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">verify</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NFCReader9writeDataEPK7uint8_t7uint8_t7uint8_tb" title="Link to this definition"></a><br /></dt>
+<dd><p>Writes binary data to the card, auto-detecting card type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – Pointer to data buffer</p></li>
+<li><p><strong>dataLength</strong> – Number of bytes to write</p></li>
+<li><p><strong>startAddress</strong> – Starting address</p></li>
+<li><p><strong>verify</strong> – Whether to verify the write operation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">NFCWriteResult</span></code> structure with success status</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NFCReader9writeNTAGE7uint8_tPK7uint8_t7uint8_tb">
+<span id="_CPPv3N9NFCReader9writeNTAGE7uint8_tPK7uint8_t7uint8_tb"></span><span id="_CPPv2N9NFCReader9writeNTAGE7uint8_tPK7uint8_t7uint8_tb"></span><span id="NFCReader::writeNTAG__uint8_t.uint8_tCP.uint8_t.b"></span><span class="n"><span class="pre">NFCWriteResult</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeNTAG</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">page</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dataLength</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">verify</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NFCReader9writeNTAGE7uint8_tPK7uint8_t7uint8_tb" title="Link to this definition"></a><br /></dt>
+<dd><p>Writes data to an NTAG or Ultralight card (page-based).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>page</strong> – Page number (use 4 or higher for user data)</p></li>
+<li><p><strong>data</strong> – Pointer to data buffer (4 bytes per page)</p></li>
+<li><p><strong>dataLength</strong> – Number of bytes to write</p></li>
+<li><p><strong>verify</strong> – Whether to verify the write operation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">NFCWriteResult</span></code> structure with success status</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NFCReader15writeNTAGStringE7uint8_tRK6Stringb">
+<span id="_CPPv3N9NFCReader15writeNTAGStringE7uint8_tRK6Stringb"></span><span id="_CPPv2N9NFCReader15writeNTAGStringE7uint8_tRK6Stringb"></span><span id="NFCReader::writeNTAGString__uint8_t.StringCR.b"></span><span class="n"><span class="pre">NFCWriteResult</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeNTAGString</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">startPage</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">String</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">text</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">verify</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NFCReader15writeNTAGStringE7uint8_tRK6Stringb" title="Link to this definition"></a><br /></dt>
+<dd><p>Writes a string across multiple NTAG/Ultralight pages.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>startPage</strong> – Starting page number</p></li>
+<li><p><strong>text</strong> – String to write</p></li>
+<li><p><strong>verify</strong> – Whether to verify the write operation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">NFCWriteResult</span></code> structure with success status</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NFCReader18writeMifareClassicE7uint8_tPK7uint8_t7uint8_tPK7uint8_tbb">
+<span id="_CPPv3N9NFCReader18writeMifareClassicE7uint8_tPK7uint8_t7uint8_tPK7uint8_tbb"></span><span id="_CPPv2N9NFCReader18writeMifareClassicE7uint8_tPK7uint8_t7uint8_tPK7uint8_tbb"></span><span id="NFCReader::writeMifareClassic__uint8_t.uint8_tCP.uint8_t.uint8_tCP.b.b"></span><span class="n"><span class="pre">NFCWriteResult</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeMifareClassic</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">block</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dataLength</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">key</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEFAULT_KEY</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">useKeyB</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">verify</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NFCReader18writeMifareClassicE7uint8_tPK7uint8_t7uint8_tPK7uint8_tbb" title="Link to this definition"></a><br /></dt>
+<dd><p>Writes data to a Mifare Classic card (block-based, requires authentication).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>block</strong> – Block number (use 4 or higher for user data)</p></li>
+<li><p><strong>data</strong> – Pointer to data buffer (16 bytes per block)</p></li>
+<li><p><strong>dataLength</strong> – Number of bytes to write</p></li>
+<li><p><strong>key</strong> – Authentication key (6 bytes, default FF FF FF FF FF FF)</p></li>
+<li><p><strong>useKeyB</strong> – Use Key B instead of Key A</p></li>
+<li><p><strong>verify</strong> – Whether to verify the write operation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">NFCWriteResult</span></code> structure with success status</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NFCReader24writeMifareClassicStringE7uint8_tRK6StringPK7uint8_tbb">
+<span id="_CPPv3N9NFCReader24writeMifareClassicStringE7uint8_tRK6StringPK7uint8_tbb"></span><span id="_CPPv2N9NFCReader24writeMifareClassicStringE7uint8_tRK6StringPK7uint8_tbb"></span><span id="NFCReader::writeMifareClassicString__uint8_t.StringCR.uint8_tCP.b.b"></span><span class="n"><span class="pre">NFCWriteResult</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeMifareClassicString</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">startBlock</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">String</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">text</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">key</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEFAULT_KEY</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">useKeyB</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">verify</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NFCReader24writeMifareClassicStringE7uint8_tRK6StringPK7uint8_tbb" title="Link to this definition"></a><br /></dt>
+<dd><p>Writes a string across multiple Mifare Classic blocks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>startBlock</strong> – Starting block number</p></li>
+<li><p><strong>text</strong> – String to write</p></li>
+<li><p><strong>key</strong> – Authentication key</p></li>
+<li><p><strong>useKeyB</strong> – Use Key B instead of Key A</p></li>
+<li><p><strong>verify</strong> – Whether to verify the write operation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">NFCWriteResult</span></code> structure with success status</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="enumerations">
+<h2>Enumerations<a class="headerlink" href="#enumerations" title="Link to this heading"></a></h2>
+<section id="nfccommmode">
+<h3>NFCCommMode<a class="headerlink" href="#nfccommmode" title="Link to this heading"></a></h3>
+<p>PN532 communication modes.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">NFCCommMode</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">I2C</span><span class="p">,</span><span class="w">  </span><span class="c1">// I2C communication (simpler wiring, slower)</span>
+<span class="w">    </span><span class="n">SPI</span><span class="w">   </span><span class="c1">// SPI communication (more wires, faster - recommended)</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="nfcreadmode">
+<h3>NFCReadMode<a class="headerlink" href="#nfcreadmode" title="Link to this heading"></a></h3>
+<p>Card reading modes.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">NFCReadMode</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">POLLING</span><span class="p">,</span><span class="w">  </span><span class="c1">// Continuous polling (~100ms interval)</span>
+<span class="w">    </span><span class="n">IRQ</span><span class="w">       </span><span class="c1">// Interrupt-driven (faster, recommended)</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="nfccardtype">
+<h3>NFCCardType<a class="headerlink" href="#nfccardtype" title="Link to this heading"></a></h3>
+<p>Supported NFC card types.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">NFCCardType</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">UNKNOWN</span><span class="p">,</span><span class="w">             </span><span class="c1">// Unknown or unsupported card type</span>
+<span class="w">    </span><span class="n">MIFARE_CLASSIC_1K</span><span class="p">,</span><span class="w">   </span><span class="c1">// Mifare Classic 1K (4-byte UID, 1KB)</span>
+<span class="w">    </span><span class="n">MIFARE_CLASSIC_4K</span><span class="p">,</span><span class="w">   </span><span class="c1">// Mifare Classic 4K (4-byte UID, 4KB)</span>
+<span class="w">    </span><span class="n">MIFARE_ULTRALIGHT</span><span class="p">,</span><span class="w">   </span><span class="c1">// Mifare Ultralight (7-byte UID, 64 bytes)</span>
+<span class="w">    </span><span class="n">NTAG</span><span class="w">                 </span><span class="c1">// NTAG213/215/216 (7-byte UID, varies)</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="data-structures">
+<h2>Data Structures<a class="headerlink" href="#data-structures" title="Link to this heading"></a></h2>
+<section id="nfccardinfo">
+<h3>NFCCardInfo<a class="headerlink" href="#nfccardinfo" title="Link to this heading"></a></h3>
+<p>Complete information about a detected NFC card.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">NFCCardInfo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">detected</span><span class="p">;</span><span class="w">              </span><span class="c1">// True if card was detected</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">uid</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span><span class="w">            </span><span class="c1">// Physical UID from manufacturer block</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">uidLength</span><span class="p">;</span><span class="w">         </span><span class="c1">// UID length (4 or 7 bytes)</span>
+<span class="w">    </span><span class="n">NFCCardType</span><span class="w"> </span><span class="n">cardType</span><span class="p">;</span><span class="w">      </span><span class="c1">// Type of card detected</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">cardID</span><span class="p">;</span><span class="w">           </span><span class="c1">// Numeric ID for 4-byte UIDs</span>
+
+<span class="w">    </span><span class="c1">// Card cloning features (advanced)</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">hasClonedUID</span><span class="p">;</span><span class="w">         </span><span class="c1">// True if card has cloned UID in custom sector</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">clonedUID</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span><span class="w">      </span><span class="c1">// Cloned UID data</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">clonedUIDLength</span><span class="p">;</span><span class="w">   </span><span class="c1">// Length of cloned UID</span>
+
+<span class="w">    </span><span class="c1">// Helper methods</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="nf">getEffectiveUID</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w">      </span><span class="c1">// Returns cloned or physical UID</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">getEffectiveUIDLength</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w">       </span><span class="c1">// Returns effective UID length</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p><strong>Usage Example:</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NFCCardInfo</span><span class="w"> </span><span class="n">card</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nfcReader</span><span class="p">.</span><span class="n">readCard</span><span class="p">();</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">card</span><span class="p">.</span><span class="n">detected</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Use effective UID (cloned if available, otherwise physical)</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="n">uid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">card</span><span class="p">.</span><span class="n">getEffectiveUID</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">card</span><span class="p">.</span><span class="n">getEffectiveUIDLength</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Or access specific UIDs</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">card</span><span class="p">.</span><span class="n">hasClonedUID</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// This card has been cloned</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Cloned UID: &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">card</span><span class="p">.</span><span class="n">clonedUIDLength</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">card</span><span class="p">.</span><span class="n">clonedUID</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">HEX</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="nfcwriteresult">
+<h3>NFCWriteResult<a class="headerlink" href="#nfcwriteresult" title="Link to this heading"></a></h3>
+<p>Result of a write operation to an NFC card.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">NFCWriteResult</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">success</span><span class="p">;</span><span class="w">         </span><span class="c1">// True if write was successful</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">verified</span><span class="p">;</span><span class="w">        </span><span class="c1">// True if write was verified</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">errorMessage</span><span class="p">;</span><span class="w">  </span><span class="c1">// Description of error (if success is false)</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p><strong>Usage Example:</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NFCWriteResult</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nfcReader</span><span class="p">.</span><span class="n">writeString</span><span class="p">(</span><span class="s">&quot;Hello NFC!&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Write successful!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">verified</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Data verified!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Write failed: &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">errorMessage</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="systemstate">
+<h3>SystemState<a class="headerlink" href="#systemstate" title="Link to this heading"></a></h3>
+<p>States of the access control system state machine.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SystemState</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">IDLE</span><span class="p">,</span><span class="w">           </span><span class="c1">// Ready to scan card</span>
+<span class="w">    </span><span class="n">ACCESS_GRANTED</span><span class="p">,</span><span class="w"> </span><span class="c1">// Card authorized, relay activated</span>
+<span class="w">    </span><span class="n">ACCESS_DENIED</span><span class="p">,</span><span class="w">  </span><span class="c1">// Card not authorized</span>
+<span class="w">    </span><span class="n">MENU</span><span class="p">,</span><span class="w">           </span><span class="c1">// In menu system</span>
+<span class="w">    </span><span class="n">REGISTERING</span><span class="p">,</span><span class="w">    </span><span class="c1">// Registering new card</span>
+<span class="w">    </span><span class="n">DELETING</span><span class="p">,</span><span class="w">       </span><span class="c1">// Deleting card</span>
+<span class="w">    </span><span class="n">LISTING_CARDS</span><span class="p">,</span><span class="w">  </span><span class="c1">// Displaying stored cards</span>
+<span class="w">    </span><span class="n">CLONING_SOURCE</span><span class="p">,</span><span class="w"> </span><span class="c1">// Waiting for source card to clone</span>
+<span class="w">    </span><span class="n">CLONING_TARGET</span><span class="w">  </span><span class="c1">// Waiting for target card to write</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="state-machine-diagram">
+<h3>State Machine Diagram<a class="headerlink" href="#state-machine-diagram" title="Link to this heading"></a></h3>
+<figure class="align-default" id="id1">
+<div class="graphviz"><object data="_images/graphviz-b9f35aa256de19480dc4480e01aaec668154f59c.svg" type="image/svg+xml" class="graphviz">
+<p class="warning">digraph state_machine {
+    rankdir=LR;
+    node [shape=box, style=rounded];
+
+    IDLE [fillcolor=lightgreen, style=filled];
+    MENU [fillcolor=lightblue, style=filled];
+    ACCESS_GRANTED [fillcolor=green, style=filled, fontcolor=white];
+    ACCESS_DENIED [fillcolor=red, style=filled, fontcolor=white];
+    REGISTERING [fillcolor=yellow, style=filled];
+    DELETING [fillcolor=orange, style=filled];
+    LISTING_CARDS [fillcolor=cyan, style=filled];
+    CLONING_SOURCE [fillcolor=violet, style=filled];
+    CLONING_TARGET [fillcolor=violet, style=filled];
+
+    IDLE -&gt; ACCESS_GRANTED [label=&quot;Card\nAuthorized&quot;];
+    IDLE -&gt; ACCESS_DENIED [label=&quot;Card\nUnauthorized&quot;];
+    IDLE -&gt; MENU [label=&quot;SELECT\nButton&quot;];
+
+    ACCESS_GRANTED -&gt; IDLE [label=&quot;Timeout\n(3s)&quot;];
+    ACCESS_DENIED -&gt; IDLE [label=&quot;Timeout\n(2s)&quot;];
+
+    MENU -&gt; REGISTERING [label=&quot;Select\nRegister&quot;];
+    MENU -&gt; DELETING [label=&quot;Select\nDelete&quot;];
+    MENU -&gt; LISTING_CARDS [label=&quot;Select\nList&quot;];
+    MENU -&gt; CLONING_SOURCE [label=&quot;Select\nClone&quot;];
+    MENU -&gt; IDLE [label=&quot;Exit Menu&quot;];
+
+    REGISTERING -&gt; MENU [label=&quot;Card\nRegistered&quot;];
+    DELETING -&gt; MENU [label=&quot;Card\nDeleted&quot;];
+    LISTING_CARDS -&gt; MENU [label=&quot;BACK\nButton&quot;];
+
+    CLONING_SOURCE -&gt; CLONING_TARGET [label=&quot;Source\nScanned&quot;];
+    CLONING_TARGET -&gt; MENU [label=&quot;Clone\nComplete&quot;];
+
+    REGISTERING -&gt; MENU [label=&quot;BACK&quot;];
+    DELETING -&gt; MENU [label=&quot;BACK&quot;];
+    CLONING_SOURCE -&gt; MENU [label=&quot;BACK&quot;];
+    CLONING_TARGET -&gt; MENU [label=&quot;BACK&quot;];
+}</p></object></div>
+<figcaption>
+<p><span class="caption-text">System State Machine</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="menuitem">
+<h3>MenuItem<a class="headerlink" href="#menuitem" title="Link to this heading"></a></h3>
+<p>Main menu options available in the system.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MenuItem</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">REGISTER_CARD</span><span class="p">,</span><span class="w">  </span><span class="c1">// Add new authorized card</span>
+<span class="w">    </span><span class="n">DELETE_CARD</span><span class="p">,</span><span class="w">    </span><span class="c1">// Remove authorized card</span>
+<span class="w">    </span><span class="n">LIST_CARDS</span><span class="p">,</span><span class="w">     </span><span class="c1">// Display all authorized cards</span>
+<span class="w">    </span><span class="n">CLONE_CARD</span><span class="p">,</span><span class="w">     </span><span class="c1">// Clone a card UID to another card</span>
+<span class="w">    </span><span class="n">SYSTEM_INFO</span><span class="p">,</span><span class="w">    </span><span class="c1">// Show system information</span>
+<span class="w">    </span><span class="n">EXIT_MENU</span><span class="w">       </span><span class="c1">// Return to IDLE mode</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="configuration-constants">
+<h2>Configuration Constants<a class="headerlink" href="#configuration-constants" title="Link to this heading"></a></h2>
+<section id="hardware-pin-definitions">
+<h3>Hardware Pin Definitions<a class="headerlink" href="#hardware-pin-definitions" title="Link to this heading"></a></h3>
+<p>Located in <code class="docutils literal notranslate"><span class="pre">include/Config.h</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// PN532 NFC Module pins (SPI mode)</span>
+<span class="cp">#define PN532_SCK  (13)</span>
+<span class="cp">#define PN532_MISO (12)</span>
+<span class="cp">#define PN532_MOSI (11)</span>
+<span class="cp">#define PN532_SS   (10)</span>
+<span class="cp">#define PN532_IRQ  (2)</span>
+<span class="cp">#define PN532_RST  (3)</span>
+
+<span class="c1">// LCD Display pins (4-bit parallel)</span>
+<span class="cp">#define LCD_RS (4)</span>
+<span class="cp">#define LCD_EN (5)</span>
+<span class="cp">#define LCD_D4 (6)</span>
+<span class="cp">#define LCD_D5 (7)</span>
+<span class="cp">#define LCD_D6 (8)</span>
+<span class="cp">#define LCD_D7 (9)</span>
+
+<span class="c1">// Button pins</span>
+<span class="cp">#define BTN_UP     (A0)</span>
+<span class="cp">#define BTN_DOWN   (A1)</span>
+<span class="cp">#define BTN_SELECT (A2)</span>
+<span class="cp">#define BTN_BACK   (A3)</span>
+
+<span class="c1">// Relay pin</span>
+<span class="cp">#define RELAY_PIN (A4)</span>
+</pre></div>
+</div>
+</section>
+<section id="system-parameters">
+<h3>System Parameters<a class="headerlink" href="#system-parameters" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Maximum number of authorized cards</span>
+<span class="cp">#define MAX_CARDS 40</span>
+
+<span class="c1">// Relay activation duration (milliseconds)</span>
+<span class="cp">#define ACCESS_GRANT_DURATION 3000</span>
+
+<span class="c1">// Button debounce delay (milliseconds)</span>
+<span class="cp">#define DEBOUNCE_DELAY 50</span>
+
+<span class="c1">// LCD dimensions</span>
+<span class="cp">#define LCD_COLS 16</span>
+<span class="cp">#define LCD_ROWS 2</span>
+
+<span class="c1">// UID length constants</span>
+<span class="cp">#define UID_LENGTH_4BYTE 4</span>
+<span class="cp">#define UID_LENGTH_7BYTE 7</span>
+<span class="cp">#define MAX_UID_LENGTH 7</span>
+</pre></div>
+</div>
+</section>
+<section id="eeprom-memory-map">
+<h3>EEPROM Memory Map<a class="headerlink" href="#eeprom-memory-map" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// EEPROM addresses</span>
+<span class="cp">#define EEPROM_MAGIC_ADDR    0      </span><span class="c1">// Magic number (2 bytes)</span>
+<span class="cp">#define EEPROM_COUNT_ADDR    2      </span><span class="c1">// Card count (1 byte)</span>
+<span class="cp">#define EEPROM_CARDS_ADDR    3      </span><span class="c1">// Start of card data</span>
+
+<span class="c1">// Card entry structure (8 bytes per card)</span>
+<span class="c1">// Byte 0: UID length (4 or 7)</span>
+<span class="c1">// Bytes 1-7: UID data (padded with 0xFF)</span>
+</pre></div>
+</div>
+</section>
+<section id="custom-sector-configuration">
+<h3>Custom Sector Configuration<a class="headerlink" href="#custom-sector-configuration" title="Link to this heading"></a></h3>
+<p>For card cloning functionality:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Custom sector for cloned UID storage</span>
+<span class="cp">#define CUSTOM_SECTOR 1</span>
+<span class="cp">#define CUSTOM_BLOCK_UID 4      </span><span class="c1">// Block for UID storage</span>
+<span class="cp">#define CUSTOM_BLOCK_META 5     </span><span class="c1">// Block for metadata</span>
+<span class="cp">#define CUSTOM_BLOCK_SPARE 6    </span><span class="c1">// Spare block</span>
+
+<span class="c1">// Default Mifare Classic keys</span>
+<span class="kt">uint8_t</span><span class="w"> </span><span class="n">defaultKeyA</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">};</span>
+<span class="kt">uint8_t</span><span class="w"> </span><span class="n">defaultKeyB</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">};</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="example-usage">
+<h2>Example Usage<a class="headerlink" href="#example-usage" title="Link to this heading"></a></h2>
+<section id="basic-setup">
+<h3>Basic Setup<a class="headerlink" href="#basic-setup" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;AccessControlSystem.h&gt;</span>
+
+<span class="n">AccessControlSystem</span><span class="w"> </span><span class="n">accessControl</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">    </span><span class="n">accessControl</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">accessControl</span><span class="p">.</span><span class="n">update</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="custom-card-handling">
+<h3>Custom Card Handling<a class="headerlink" href="#custom-card-handling" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;NFCReader.h&gt;</span>
+
+<span class="n">NFCReader</span><span class="w"> </span><span class="nf">reader</span><span class="p">(</span><span class="n">NFCCommMode</span><span class="o">::</span><span class="n">SPI</span><span class="p">,</span><span class="w"> </span><span class="n">NFCReadMode</span><span class="o">::</span><span class="n">IRQ</span><span class="p">);</span>
+<span class="kt">uint8_t</span><span class="w"> </span><span class="n">uid</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span>
+<span class="kt">uint8_t</span><span class="w"> </span><span class="n">uidLength</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">reader</span><span class="p">.</span><span class="n">begin</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;NFC reader initialization failed!&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">reader</span><span class="p">.</span><span class="n">readCard</span><span class="p">(</span><span class="n">uid</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">uidLength</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Card UID: &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">uidLength</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">uid</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">HEX</span><span class="p">);</span>
+<span class="w">            </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="manual-card-registration">
+<h3>Manual Card Registration<a class="headerlink" href="#manual-card-registration" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">registerNewCard</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">uid</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">uidLength</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Present card to register...&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">reader</span><span class="p">.</span><span class="n">readCard</span><span class="p">(</span><span class="n">uid</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">uidLength</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">accessControl</span><span class="p">.</span><span class="n">registerCard</span><span class="p">(</span><span class="n">uid</span><span class="p">,</span><span class="w"> </span><span class="n">uidLength</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Card registered successfully!&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Failed to register card&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="return-values">
+<h2>Return Values<a class="headerlink" href="#return-values" title="Link to this heading"></a></h2>
+<p>Most methods return boolean values:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">true</span></code>: Operation successful</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">false</span></code>: Operation failed or card not found</p></li>
+</ul>
+<p>Check serial output for detailed error messages during development.</p>
+</section>
+<section id="memory-considerations">
+<h2>Memory Considerations<a class="headerlink" href="#memory-considerations" title="Link to this heading"></a></h2>
+<section id="eeprom-usage">
+<h3>EEPROM Usage<a class="headerlink" href="#eeprom-usage" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Magic number: 2 bytes</p></li>
+<li><p>Card count: 1 byte</p></li>
+<li><p>Card data: 8 bytes per card × 40 cards = 320 bytes</p></li>
+<li><p><strong>Total</strong>: 323 bytes of 1024 bytes available</p></li>
+</ul>
+</section>
+<section id="ram-usage">
+<h3>RAM Usage<a class="headerlink" href="#ram-usage" title="Link to this heading"></a></h3>
+<p>Approximate RAM usage:</p>
+<ul class="simple">
+<li><p>LiquidCrystal library: ~100 bytes</p></li>
+<li><p>Adafruit_PN532 library: ~200 bytes</p></li>
+<li><p>System variables: ~150 bytes</p></li>
+<li><p>Stack and buffers: ~200 bytes</p></li>
+<li><p><strong>Total</strong>: ~650 bytes of 2048 bytes available</p></li>
+</ul>
+</section>
+</section>
+<section id="thread-safety">
+<h2>Thread Safety<a class="headerlink" href="#thread-safety" title="Link to this heading"></a></h2>
+<p>The system is single-threaded and designed for Arduino’s cooperative
+multitasking model. All operations are non-blocking when using IRQ mode.</p>
+</section>
+<section id="debugging">
+<h2>Debugging<a class="headerlink" href="#debugging" title="Link to this heading"></a></h2>
+<p>Enable serial debugging in <code class="docutils literal notranslate"><span class="pre">Config.h</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define DEBUG_MODE 1</span>
+</pre></div>
+</div>
+<p>This provides verbose logging of all operations.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="diagrams.html" class="btn btn-neutral float-left" title="Class Diagrams" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="eeprom.html" class="btn btn-neutral float-right" title="EEPROM Memory Layout" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RWU Student Project.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
