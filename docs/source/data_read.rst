@@ -15,20 +15,43 @@ The reading operation relies on the following components:
 * **PN532 NFC Module**: Configured in SPI mode for high-speed communication.
 * **Arduino Nano (ATmega328P)**: Processes the data and handles the interrupt logic.
 
-**Pin Connections (SPI Mode)**:
+Pin Configuration
+^^^^^^^^^^^^^^^^^
 
-* **SCK**: Arduino D13 -> PN532 SCK
-* **MISO**: Arduino D12 -> PN532 MISO
-* **MOSI**: Arduino D11 -> PN532 MOSI
-* **SS**: Arduino D10 -> PN532 SS
-* **IRQ**: Arduino D2 -> PN532 IRQ (Critical for non-blocking detection)
+Default pin assignments are defined in ``include/Config.h``. Modify if needed::
+
+    // PN532 NFC Module pins
+    #define PN532_SCK  (13)
+    #define PN532_MISO (12)
+    #define PN532_MOSI (11)
+    #define PN532_SS   (10)
+    #define PN532_IRQ  (2)
+    #define PN532_RST  (3)
+
+    // LCD Display pins
+    #define LCD_RS (4)
+    #define LCD_EN (5)
+    #define LCD_D4 (6)
+    #define LCD_D5 (7)
+    #define LCD_D6 (8)
+    #define LCD_D7 (9)
+
+    // Button pins
+    #define BTN_UP     (A0)
+    #define BTN_DOWN   (A1)
+    #define BTN_SELECT (A2)
+    #define BTN_BACK   (A3)
+
+    // Relay pin
+    #define RELAY_PIN (A4)
 
 Software Used
 -------------
 * **Library**: ``Adafruit_PN532`` for low-level communication.
 * **Class**: ``NFCReader`` (defined in ``include/NFCReader.h``) encapsulates the reading logic.
 
-**Key Methods**:
+Key Methods
+^^^^^^^^^^^
 
 * ``readCard()``: The main orchestrator for detecting and reading data.
 * ``readPhysicalUID()``: Reads the read-only Block 0.
@@ -44,7 +67,8 @@ Code Snippets and API Implementation
 ------------------------------------
 The system implements an intelligent ``readCard`` method that automatically prioritizes cloned data.
 
-**Reading Strategy (NFCReader.cpp)**:
+Reading Strategy (NFCReader.cpp)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: cpp
 
@@ -66,7 +90,8 @@ The system implements an intelligent ``readCard`` method that automatically prio
       return info;
     }
 
-**Custom Sector Reading (NFCReader.cpp)**:
+Custom Sector Reading (NFCReader.cpp)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: cpp
 
