@@ -32,6 +32,12 @@ jobs:
         cache: 'pip'
         cache-dependency-path: 'docs/requirements.txt'
 
+    - name: Set up Java (for PlantUML)
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
     - name: Install system dependencies (graphviz)
       run: |
         sudo apt-get install -y --no-install-recommends graphviz
@@ -42,7 +48,8 @@ jobs:
 
     - name: Build Sphinx HTML
       run: |
-        sphinx-build -b html -j auto docs/source docs/build/html
+        cd docs
+        sphinx-build -b html -j auto source build/html
 
     # PDF generation removed — this workflow builds only HTML and deploys it
 
@@ -51,10 +58,7 @@ jobs:
         mkdir -p public
         # Copy HTML output as primary site
         cp -r docs/build/html/* public/
-        # Copy any generated PDFs into public/pdf
-        mkdir -p public/pdf
-        find docs/build -name "*.pdf" -exec cp {} public/pdf/ \;
-        # Allow directories beginning with '_'
+        # Allow directories beginning with '_' (needed for _static, _plantuml, etc.)
         touch public/.nojekyll
 
     - name: Upload documentation artifact
