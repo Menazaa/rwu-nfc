@@ -293,17 +293,6 @@ and multiple write operation examples.
 
 **Key Features**
 
-This example demonstrates writing to both NTAG and Mifare Classic cards:
-
-.. code-block:: cpp
-
-.. literalinclude:: ../../examples/write_example.cpp
-   :language: cpp
-   :linenos:
-   :caption: examples/write_example.cpp - Complete NFC Tag Writing Example
-
-**Key Features**
-
 * Auto-detect card type and write appropriately
 * Multiple write examples (string, binary data, type-specific)
 * Write verification to ensure data integrity
@@ -509,6 +498,158 @@ Common Issues and Solutions
 * **Cause**: Attempted to write to Block 0 (will fail, but card is fine) OR wrote incorrect data to sector trailer
 * **Note**: Block 0 is read-only and cannot be damaged by write attempts
 * **Solution for locked sector**: Sector may be permanently locked if trailer was corrupted - use a new card or different sector
+
+Task 3: AES Advanced Encryption
+-------------------------------
+
+The third course task advances from simple identification to secure authentication. By implementing AES-128 encryption, we create a system that validates *what you know* (the secret key) in addition to *what you have* (the card UID).
+
+Learning Objectives
+^^^^^^^^^^^^^^^^^^^
+
+* Implement **AES-128 encryption** (ECB Mode) on the Arduino Nano
+* Understand **MIFARE Classic memory sectors** for data hiding
+* Implement a **Dual-Mode System** (Creator vs. Reader) using hardware interrupts
+* Demonstrate a "Security Trap" that detects and rejects cloned cards
+
+Example Code: aes_example.cpp
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Location: ``examples/aes_example.cpp``
+
+**Complete Source Code**
+
+This example implements the complete secure access logic. It integrates the ``DavyLandman/AESLib`` for encryption and uses the existing hardware buttons for mode switching.
+
+.. literalinclude:: ../../examples/aes_example.cpp
+   :language: cpp
+   :linenos:
+   :caption: examples/aes_example.cpp - AES Encryption
+
+Key Concepts & Implementation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**1. Symmetric Encryption (AES-128)**
+
+The system relies on a "Shared Secret" architecture. Both the Creator (Issuer) and the Reader (Gatekeeper) must know the same 128-bit key. In this educational example, the key is hardcoded.
+
+.. code-block:: cpp
+
+   // 128-bit System Key (16 bytes)
+   // In production, store this in a Secure Element or lock read-out protection
+   uint8_t systemKey[16] = {
+       0xA1, 0xA2, 0xA3, 0xA4, 0xA5, 0xA6, 0xA7, 0xA8,
+       0xB1, 0xB2, 0xB3, 0xB4, 0xB5, 0xB6, 0xB7, 0xB8
+   };
+
+**2. The "Cloning Trap" Strategy**
+
+Standard cloning tools (including the one built in Task 2) typically optimize for speed and compatibility by copying the **UID** and **Sector 1** (Manufacturer Data). They often ignore application-specific sectors.
+
+We exploit this behavior by storing our critical security token in **Sector 2**.
+
+.. code-block:: cpp
+
+   // The "Trap" Location: Sector 2, Block 8
+   // Standard cloners only copy Sector 1 (Block 4)
+   #define SECURE_BLOCK 8
+   
+   char validPassword[16] = "TopSecretPasswd";
+
+**3. Clone Detection Logic**
+
+When a card is scanned in "Reader Mode," the system performs a specific check before attempting decryption. If the secure block is empty (0x00 or 0xFF), it implies the card is a clone that failed to copy the hidden sector.
+
+.. code-block:: cpp
+
+   if (nfc.mifareclassic_ReadDataBlock(SECURE_BLOCK, readBuffer)) {
+       
+       // Step A: Check for Empty/Clone
+       bool isEmpty = true;
+       for(int i=0; i<16; i++) {
+           if(readBuffer[i] != 0x00 && readBuffer[i] != 0xFF) isEmpty = false;
+       }
+
+       if (isEmpty) {
+            Serial.println("[ACCESS DENIED] CLONE DETECTED");
+            Serial.println("Reason: Sector 2 is empty (Standard Clone).");
+            return;
+       }
+
+       // Step B: Decrypt & Validate
+       aes128_dec_single(systemKey, readBuffer);
+       // ... comparison logic ...
+   }
+
+Running the Example
+^^^^^^^^^^^^^^^^^^^
+
+**Step 1: Build and Upload**
+   
+   This task requires specific encryption libraries. Use the ``task3_aes`` environment.
+
+   **VS Code / PlatformIO Sidebar:**
+   
+   1. Expand ``PROJECT TASKS`` → ``task3_aes``
+   2. Click ``Upload``
+   3. Click ``Monitor``
+
+   **Command Line:**
+   
+   .. code-block:: bash
+   
+      pio run -e task3_aes --target upload
+      pio device monitor --baud 115200
+
+**Step 2: Create a Valid Token**
+   
+   The system starts in ``[ READER ]`` mode. To create a secure card:
+   
+   1. Press the **SELECT Button (A2)**.
+   2. Verify output says ``MODE SWITCHED TO: [ CREATOR ]``.
+   3. Scan a generic blue key fob.
+   
+   *Result:* The encrypted password is written to Block 8.
+
+**Step 3: Verify Access**
+   
+   1. Press **SELECT** again to return to ``[ READER ]`` mode.
+   2. Scan the key fob you just created.
+   
+   *Result:* The system decrypts the block and grants access.
+
+**Step 4: Simulate an Attack**
+   
+   To demonstrate the security, scan a card that has not been initialized by this system (or a card cloned using only UID copying).
+   
+   *Result:* The system detects the missing data in Sector 2 and denies access.
+
+Expected Output
+^^^^^^^^^^^^^^^
+
+**Scenario A: Legitimate User Access**
+
+.. code-block:: text
+
+   --- TASK 3: AES SECURITY SYSTEM ---
+   System Ready.
+   Current Mode: [ READER ]
+   
+   [!] Card Detected
+   
+   >> CHECKING ACCESS...
+   *** ACCESS GRANTED ***
+   Encrypted Password Verified.
+
+**Scenario B: Cloning Attempt Detected**
+
+.. code-block:: text
+
+   [!] Card Detected
+   
+   >> CHECKING ACCESS...
+   [ACCESS DENIED] CLONE DETECTED (Sector 2 Empty).
+
 
 Advanced Topics
 ---------------
